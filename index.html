@@ -2,1027 +2,829 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Laqab - Premium Ethnic Menswear Boutique. Sherwani, Kurta, Wedding Wear & Festival Collection. Worldwide Shipping.">
-    <title>LAQAB | Premium Ethnic Menswear</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>LAQAB — Premium Indian Wedding Embroidery</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         :root {
-            --gold: #D4AF37;
-            --gold-light: #F4E4BA;
-            --maroon: #800020;
-            --maroon-dark: #5C0015;
-            --cream: #FFF8E7;
+            --gold: #C8A45C;
+            --gold-light: #E8D5A3;
+            --gold-dark: #A8883D;
+            --cream: #FAF6EF;
+            --cream-dark: #F0E8D8;
             --black: #1A1A1A;
+            --black-2: #2A2A2A;
             --white: #FFFFFF;
+            --text: #3A3A3A;
+            --text-light: #7A7A7A;
         }
-
+        
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--cream);
-            color: var(--black);
+            font-family: 'Inter', sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            line-height: 1.7;
             overflow-x: hidden;
         }
-
-        /* Navigation */
+        
+        h1, h2, h3, h4, .serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        /* === NAVBAR === */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 20px 5%;
+            padding: 16px 24px;
+            background: rgba(26,26,26,0.95);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            z-index: 1000;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
-            transition: background 0.3s;
         }
-
-        nav.scrolled {
-            background: var(--black);
-        }
-
-        .logo {
-            font-family: 'Cinzel', serif;
-            font-size: 2rem;
-            font-weight: 700;
+        
+        .nav-logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            font-weight: 600;
+            letter-spacing: 3px;
             color: var(--gold);
-            letter-spacing: 8px;
             text-decoration: none;
         }
-
-        .nav-links {
-            display: flex;
-            gap: 40px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--white);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 400;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            position: relative;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--gold);
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 1px;
+        .nav-logo span { color: var(--white); }
+        
+        .nav-cta {
             background: var(--gold);
-            transition: width 0.3s;
+            color: var(--black);
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
         }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        /* Hero Section */
+        .nav-cta:hover { background: var(--gold-light); transform: scale(1.05); }
+        
+        /* === HERO === */
         .hero {
-            height: 100vh;
-            background: linear-gradient(to right, var(--black) 0%, var(--black) 60%, transparent 100%),
-                        url('https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=1920&q=80') center/cover;
+            min-height: 100vh;
             display: flex;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            padding: 0 10%;
+            text-align: center;
+            padding: 120px 24px 60px;
+            background: linear-gradient(135deg, var(--black) 0%, var(--black-2) 50%, #1a1410 100%);
             position: relative;
+            overflow: hidden;
         }
-
+        
         .hero::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(128,0,32,0.3) 0%, transparent 50%);
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 50% 50%, rgba(200,164,92,0.03) 0%, transparent 60%);
+            animation: shimmer 8s ease-in-out infinite;
         }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 600px;
+        
+        @keyframes shimmer {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(20px, -20px); }
         }
-
-        .hero-subtitle {
-            font-size: 0.9rem;
-            letter-spacing: 6px;
-            color: var(--gold);
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-
-        .hero-title {
-            font-family: 'Cinzel', serif;
-            font-size: 4.5rem;
-            font-weight: 700;
-            color: var(--white);
-            line-height: 1.1;
-            margin-bottom: 30px;
-        }
-
-        .hero-title span {
-            color: var(--gold);
-        }
-
-        .hero-desc {
-            font-size: 1rem;
-            color: rgba(255,255,255,0.8);
-            line-height: 1.8;
-            margin-bottom: 40px;
-        }
-
-        .btn {
+        
+        .hero-badge {
             display: inline-block;
-            padding: 16px 50px;
-            font-size: 0.85rem;
-            font-weight: 500;
+            padding: 6px 20px;
+            border: 1px solid var(--gold-dark);
+            border-radius: 25px;
+            color: var(--gold-light);
+            font-size: 11px;
             letter-spacing: 3px;
             text-transform: uppercase;
-            text-decoration: none;
-            transition: all 0.3s;
-            cursor: pointer;
-            border: none;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
         }
-
-        .btn-primary {
+        
+        .hero h1 {
+            font-size: clamp(42px, 10vw, 80px);
+            color: var(--white);
+            font-weight: 600;
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 1;
+            line-height: 1.1;
+        }
+        
+        .hero h1 .gold { color: var(--gold); }
+        
+        .hero p {
+            font-size: clamp(16px, 3vw, 20px);
+            color: rgba(255,255,255,0.6);
+            max-width: 520px;
+            margin: 20px auto 40px;
+            position: relative;
+            z-index: 1;
+            font-weight: 300;
+        }
+        
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
             background: var(--gold);
             color: var(--black);
+            padding: 16px 36px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            position: relative;
+            z-index: 1;
         }
-
-        .btn-primary:hover {
-            background: var(--gold-light);
-            transform: translateY(-2px);
+        .hero-cta:hover { background: var(--gold-light); transform: translateY(-2px); }
+        
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 60px;
+            position: relative;
+            z-index: 1;
         }
-
-        .btn-outline {
-            background: transparent;
-            color: var(--white);
-            border: 1px solid var(--white);
-            margin-left: 20px;
-        }
-
-        .btn-outline:hover {
-            background: var(--white);
-            color: var(--black);
-        }
-
-        /* Collections Section */
-        .collections {
-            padding: 100px 5%;
-            background: var(--cream);
-        }
-
-        .section-header {
+        .hero-stats div {
             text-align: center;
-            margin-bottom: 60px;
         }
-
-        .section-subtitle {
-            font-size: 0.85rem;
-            letter-spacing: 4px;
-            color: var(--gold);
-            text-transform: uppercase;
-            margin-bottom: 15px;
-        }
-
-        .section-title {
-            font-family: 'Cinzel', serif;
-            font-size: 2.5rem;
-            color: var(--black);
-        }
-
-        .collection-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .collection-card {
-            position: relative;
-            height: 450px;
-            overflow: hidden;
-            cursor: pointer;
-        }
-
-        .collection-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-
-        .collection-card:hover img {
-            transform: scale(1.1);
-        }
-
-        .collection-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 40px 30px;
-            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
-        }
-
-        .collection-name {
-            font-family: 'Cinzel', serif;
-            font-size: 1.5rem;
-            color: var(--white);
-            margin-bottom: 10px;
-        }
-
-        .collection-count {
-            font-size: 0.8rem;
-            color: var(--gold);
-            letter-spacing: 2px;
-        }
-
-        /* About Section */
-        .about {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            min-height: 600px;
-        }
-
-        .about-image {
-            background: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80') center/cover;
-        }
-
-        .about-content {
-            background: var(--maroon);
-            padding: 80px 60px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .about-content .section-subtitle {
-            color: var(--gold-light);
-        }
-
-        .about-content .section-title {
-            color: var(--white);
-            margin-bottom: 30px;
-        }
-
-        .about-text {
-            font-size: 1rem;
-            line-height: 2;
-            color: rgba(255,255,255,0.9);
-            margin-bottom: 40px;
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .feature {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            color: var(--white);
-        }
-
-        .feature-icon {
-            width: 40px;
-            height: 40px;
-            border: 1px solid var(--gold);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--gold);
-            font-size: 1.2rem;
-        }
-
-        /* Products Section */
-        .products {
-            padding: 100px 5%;
-            background: var(--cream);
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
-        }
-
-        .product-card {
-            background: var(--white);
-            overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-
-        .product-image {
-            height: 300px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .product-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-
-        .product-card:hover .product-image img {
-            transform: scale(1.1);
-        }
-
-        .product-badge {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background: var(--maroon);
-            color: var(--white);
-            padding: 5px 15px;
-            font-size: 0.7rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .product-info {
-            padding: 25px;
-        }
-
-        .product-name {
-            font-family: 'Cinzel', serif;
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-        }
-
-        .product-price {
-            font-size: 1rem;
+        .hero-stats .num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 32px;
             color: var(--gold);
             font-weight: 600;
         }
-
-        .product-price span {
-            font-size: 0.85rem;
-            color: #999;
-            text-decoration: line-through;
-            margin-left: 10px;
+        .hero-stats .label {
+            font-size: 11px;
+            color: rgba(255,255,255,0.4);
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
-
-        /* Testimonials */
-        .testimonials {
-            padding: 100px 5%;
-            background: var(--black);
+        
+        /* === SECTION COMMON === */
+        section {
+            padding: 80px 24px;
+            max-width: 1100px;
+            margin: 0 auto;
         }
-
-        .testimonials .section-subtitle {
+        
+        .section-tag {
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
             color: var(--gold);
-        }
-
-        .testimonials .section-title {
-            color: var(--white);
-        }
-
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .testimonial-card {
-            background: rgba(255,255,255,0.05);
-            padding: 40px;
-            border: 1px solid rgba(212,175,55,0.2);
-        }
-
-        .testimonial-text {
-            font-size: 1rem;
-            line-height: 1.8;
-            color: rgba(255,255,255,0.9);
-            font-style: italic;
-            margin-bottom: 25px;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .testimonial-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--gold);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Cinzel', serif;
-            font-weight: 700;
-            color: var(--black);
-        }
-
-        .testimonial-name {
-            color: var(--white);
+            margin-bottom: 12px;
             font-weight: 500;
         }
-
-        .testimonial-location {
-            font-size: 0.8rem;
-            color: var(--gold);
+        
+        .section-title {
+            font-size: clamp(32px, 6vw, 48px);
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: 16px;
+            line-height: 1.2;
         }
-
-        /* Contact Section */
-        .contact {
-            padding: 100px 5%;
-            background: var(--cream);
+        
+        .section-desc {
+            font-size: 16px;
+            color: var(--text-light);
+            max-width: 600px;
+            line-height: 1.8;
         }
-
-        .contact-grid {
+        
+        /* === STORY === */
+        #story {
+            padding-top: 100px;
+        }
+        .story-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 60px;
-        }
-
-        .contact-info h3 {
-            font-family: 'Cinzel', serif;
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-        }
-
-        .contact-info p {
-            color: #666;
-            line-height: 1.8;
-            margin-bottom: 30px;
-        }
-
-        .contact-details {
-            list-style: none;
-        }
-
-        .contact-details li {
-            display: flex;
             align-items: center;
-            gap: 15px;
-            margin-bottom: 20px;
-            color: #333;
+            margin-top: 40px;
         }
-
-        .contact-icon {
-            width: 45px;
-            height: 45px;
-            background: var(--maroon);
+        
+        .story-visual {
+            background: var(--cream-dark);
+            border-radius: 16px;
+            padding: 40px;
+            min-height: 300px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--white);
-            font-size: 1.1rem;
+            position: relative;
+            overflow: hidden;
         }
-
-        .contact-form {
-            background: var(--white);
-            padding: 50px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+        .story-visual::before {
+            content: 'LAQAB';
+            position: absolute;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 120px;
+            font-weight: 700;
+            color: rgba(200,164,92,0.06);
+            transform: rotate(-15deg);
         }
-
-        .form-group {
-            margin-bottom: 25px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 15px;
-            border: 1px solid #ddd;
-            font-family: 'Poppins', sans-serif;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--gold);
-        }
-
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        .contact-form .btn {
-            width: 100%;
+        .story-visual .emblem {
             text-align: center;
+            position: relative;
+            z-index: 1;
         }
-
-        /* Footer */
-        footer {
-            background: var(--black);
-            padding: 60px 5% 30px;
+        .story-visual .emblem h3 {
+            font-size: 28px;
+            color: var(--gold-dark);
+            font-weight: 600;
         }
-
-        .footer-top {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 60px;
-            margin-bottom: 50px;
+        .story-visual .emblem p {
+            font-size: 14px;
+            color: var(--text-light);
+            max-width: 280px;
+            margin-top: 10px;
         }
-
-        .footer-brand .logo {
-            margin-bottom: 20px;
-            display: block;
+        
+        .story-text h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: 16px;
         }
-
-        .footer-brand p {
-            color: rgba(255,255,255,0.7);
-            line-height: 1.8;
-            font-size: 0.9rem;
+        .story-text p {
+            color: var(--text-light);
+            margin-bottom: 16px;
+            font-size: 15px;
+            line-height: 1.9;
         }
-
-        .footer-column h4 {
-            font-family: 'Cinzel', serif;
-            color: var(--gold);
-            margin-bottom: 25px;
-            font-size: 1rem;
-        }
-
-        .footer-column ul {
-            list-style: none;
-        }
-
-        .footer-column li {
-            margin-bottom: 12px;
-        }
-
-        .footer-column a {
-            color: rgba(255,255,255,0.7);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
-
-        .footer-column a:hover {
-            color: var(--gold);
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
+        .story-text .acronym {
+            background: var(--cream-dark);
+            padding: 20px;
+            border-radius: 12px;
             margin-top: 20px;
         }
-
-        .social-link {
-            width: 45px;
-            height: 45px;
-            border: 1px solid rgba(255,255,255,0.3);
+        .story-text .acronym strong {
+            display: block;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            color: var(--gold-dark);
+            margin-bottom: 8px;
+        }
+        .story-text .acronym span {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+        
+        /* === PRODUCTS === */
+        #products {
+            background: var(--white);
+            border-radius: 24px 24px 0 0;
+            max-width: 100%;
+            padding: 100px 24px;
+        }
+        #products .inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+        
+        .product-card {
+            background: var(--cream);
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.3s;
+            border: 1px solid transparent;
+        }
+        .product-card:hover {
+            border-color: var(--gold-light);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+        }
+        .product-card .icon {
+            width: 48px;
+            height: 48px;
+            background: var(--gold);
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--white);
-            text-decoration: none;
-            transition: all 0.3s;
+            font-size: 22px;
+            margin-bottom: 16px;
         }
-
-        .social-link:hover {
-            background: var(--gold);
-            border-color: var(--gold);
+        .product-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+        .product-card .price {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            color: var(--gold-dark);
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .product-card p {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        /* === PROCESS === */
+        #process {
+            background: var(--black);
+            color: var(--white);
+            max-width: 100%;
+            padding: 100px 24px;
+        }
+        #process .inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        #process .section-title { color: var(--white); }
+        #process .section-desc { color: rgba(255,255,255,0.5); }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+            counter-reset: step;
+        }
+        
+        .step {
+            text-align: center;
+            counter-increment: step;
+        }
+        .step::before {
+            content: '0' counter(step);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 42px;
+            color: var(--gold-dark);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 12px;
+            opacity: 0.4;
+        }
+        .step h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+        .step p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.5);
+            line-height: 1.6;
+        }
+        
+        /* === WHY LAQAB === */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+        
+        .why-card {
+            background: var(--cream-dark);
+            border-radius: 16px;
+            padding: 28px;
+            text-align: center;
+        }
+        .why-card .num { 
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 36px;
+            color: var(--gold);
+            font-weight: 600;
+        }
+        .why-card h4 {
+            font-size: 18px;
+            color: var(--black);
+            margin: 10px 0 8px;
+            font-weight: 600;
+        }
+        .why-card p {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+        
+        /* === TESTIMONIALS === */
+        #testimonials {
+            background: var(--cream-dark);
+            border-radius: 24px;
+            max-width: 100%;
+            padding: 80px 24px;
+            margin: 0;
+        }
+        #testimonials .inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+        .testimonial {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 28px;
+            border-left: 3px solid var(--gold);
+        }
+        .testimonial .quote {
+            font-style: italic;
+            color: var(--text);
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+        .testimonial .author {
+            font-size: 14px;
+            font-weight: 600;
             color: var(--black);
         }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 30px;
+        .testimonial .role {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+        
+        /* === CONTACT === */
+        #contact {
+            text-align: center;
+            padding: 100px 24px;
+            background: linear-gradient(135deg, var(--black) 0%, var(--black-2) 100%);
+            color: var(--white);
+            max-width: 100%;
+            margin: 0;
+        }
+        #contact .inner {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        #contact .section-title { color: var(--white); }
+        #contact .section-desc { color: rgba(255,255,255,0.5); }
+        
+        .contact-actions {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 40px;
             align-items: center;
         }
-
-        .footer-bottom p {
-            color: rgba(255,255,255,0.5);
-            font-size: 0.85rem;
-        }
-
-        /* Mobile Menu */
-        .mobile-menu-btn {
-            display: none;
-            flex-direction: column;
-            gap: 6px;
-            cursor: pointer;
-            z-index: 1001;
-        }
-
-        .mobile-menu-btn span {
-            width: 30px;
-            height: 2px;
-            background: var(--white);
+        
+        .wa-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: #25D366;
+            color: var(--white);
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
             transition: all 0.3s;
+            width: 100%;
+            max-width: 400px;
         }
-
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .hero-title {
-                font-size: 3rem;
-            }
-
-            .collection-grid,
-            .testimonial-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .product-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .about {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-top {
-                grid-template-columns: repeat(2, 1fr);
-            }
+        .wa-btn:hover { background: #20BD5A; transform: translateY(-2px); }
+        
+        .phone-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: var(--gold);
+            font-size: 18px;
+            text-decoration: none;
+            font-weight: 500;
         }
-
+        .phone-btn:hover { color: var(--gold-light); }
+        
+        .contact-info {
+            margin-top: 40px;
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .contact-info div {
+            text-align: center;
+        }
+        .contact-info .label {
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.3);
+            margin-bottom: 4px;
+        }
+        .contact-info .value {
+            font-size: 15px;
+            color: var(--gold-light);
+        }
+        
+        /* === FOOTER === */
+        footer {
+            background: var(--black);
+            padding: 40px 24px;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        footer .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            color: var(--gold);
+            font-weight: 600;
+            letter-spacing: 3px;
+        }
+        footer p {
+            color: rgba(255,255,255,0.3);
+            font-size: 12px;
+            margin-top: 12px;
+        }
+        
+        /* === RESPONSIVE === */
         @media (max-width: 768px) {
-            .mobile-menu-btn {
-                display: flex;
-            }
-
-            .nav-links {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 100%;
-                height: 100vh;
-                background: var(--black);
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 30px;
-                transition: right 0.3s;
-            }
-
-            .nav-links.active {
-                right: 0;
-            }
-
-            .hero {
-                padding: 0 5%;
-            }
-
-            .hero-title {
-                font-size: 2.5rem;
-            }
-
-            .collection-grid,
-            .product-grid,
-            .testimonial-grid,
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .about-content {
-                padding: 60px 30px;
-            }
-
-            .features {
-                grid-template-columns: 1fr;
-            }
-
-            .btn-outline {
-                margin-left: 0;
-                margin-top: 15px;
-            }
-
-            .footer-top {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-                gap: 15px;
-                text-align: center;
-            }
+            nav { padding: 12px 16px; }
+            .hero { padding: 100px 16px 40px; }
+            section { padding: 60px 16px; }
+            .story-grid { grid-template-columns: 1fr; gap: 30px; }
+            .story-visual { min-height: 200px; padding: 24px; }
+            .product-grid { grid-template-columns: 1fr; }
+            .hero-stats { gap: 24px; flex-wrap: wrap; justify-content: center; }
+            #products, #process, #testimonials, #contact { padding: 60px 16px; }
+            .contact-info { gap: 24px; }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav id="navbar">
-        <a href="#" class="logo">LAQAB</a>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#collections">Collections</a></li>
-            <li><a href="#products">Shop</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="mobile-menu-btn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+    <!-- NAVBAR -->
+    <nav>
+        <a href="#" class="nav-logo">LA<span>Q</span>AB</a>
+        <a href="https://wa.me/919987314177?text=Namaste!%20Main%20LAQAB%20se%20wedding%20embroidery%20ke%20baare%20mein%20pochhna%20chahta%20hoon." class="nav-cta" target="_blank">WhatsApp 📩</a>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <p class="hero-subtitle">Premium Ethnic Menswear</p>
-            <h1 class="hero-title">Where <span>Tradition</span> Meets <span>Elegance</span></h1>
-            <p class="hero-desc">Discover the finest collection of ethnic menswear — from regal sherwanis to classic kurtas. Crafted for the modern gentleman who honors heritage.</p>
-            <a href="#collections" class="btn btn-primary">Explore Collections</a>
-            <a href="#contact" class="btn btn-outline">Get in Touch</a>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-badge">Est. 2026 · Lucknow, India</div>
+        <h1>Wedding Embroidery<br><span class="gold">Worth a Thousand Words</span></h1>
+        <p>Premium zari embroidery, handcrafted by master artisans. Delivered to your doorstep anywhere in the world.</p>
+        <a href="https://wa.me/919987314177?text=Namaste!%20Main%20LAQAB%20se%20wedding%20embroidery%20ke%20baare%20mein%20pochhna%20chahta%20hoon." class="hero-cta" target="_blank">
+            ✦ Start Your Order on WhatsApp
+        </a>
+        <div class="hero-stats">
+            <div><div class="num">100+</div><div class="label">Master Artisans</div></div>
+            <div><div class="num">2 Weeks</div><div class="label">Avg. Turnaround</div></div>
+            <div><div class="num">$500–40K</div><div class="label">Price Range</div></div>
         </div>
     </section>
 
-    <!-- Collections Section -->
-    <section class="collections" id="collections">
-        <div class="section-header">
-            <p class="section-subtitle">Our Collections</p>
-            <h2 class="section-title">Timeless Elegance</h2>
-        </div>
-        <div class="collection-grid">
-            <div class="collection-card">
-                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80" alt="Sherwani Collection">
-                <div class="collection-overlay">
-                    <h3 class="collection-name">Sherwani</h3>
-                    <p class="collection-count">24 Designs</p>
+    <!-- STORY -->
+    <section id="story">
+        <div class="section-tag">Our Story</div>
+        <h2 class="section-title">Craft That Travels<br>Generations</h2>
+        <div class="story-grid">
+            <div class="story-text">
+                <h3>From the Karigar's Hands to Your Wedding</h3>
+                <p>
+                    LAQAB was born from a simple realisation — the finest embroidery in the world 
+                    is made in small workshops across Lucknow, but the people who value it most 
+                    (NRIs, global Indians) can't access it without flying back or settling for 
+                    mass-produced alternatives.
+                </p>
+                <p>
+                    We bridge that gap. A network of 100–300 master karigar, coordinated through 
+                    AI, delivering premium custom embroidery anywhere in the world — with the 
+                    same love and precision that would take a month of back-and-forth in a 
+                    physical workshop.
+                </p>
+                <div class="acronym">
+                    <strong>LAQAB</strong>
+                    <span><b>L</b>ucknow — <b>A</b>rtisans — <b>Q</b>uality — <b>zA</b>ri — <b>B</b>outique</span>
                 </div>
             </div>
-            <div class="collection-card">
-                <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=600&q=80" alt="Wedding Collection">
-                <div class="collection-overlay">
-                    <h3 class="collection-name">Wedding Special</h3>
-                    <p class="collection-count">18 Designs</p>
-                </div>
-            </div>
-            <div class="collection-card">
-                <img src="https://images.unsplash.com/photo-1612178537253-bccd437b730e?w=600&q=80" alt="Festival Collection">
-                <div class="collection-overlay">
-                    <h3 class="collection-name">Festival Collection</h3>
-                    <p class="collection-count">32 Designs</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="about-image"></div>
-        <div class="about-content">
-            <p class="section-subtitle">Our Story</p>
-            <h2 class="section-title">The Legacy of LAQAB</h2>
-            <p class="about-text">At Laqab, we believe every man deserves to wear his culture with pride. Our journey began with a passion to preserve the rich heritage of ethnic craftsmanship while embracing modern aesthetics. Each piece in our collection is a testament to the skill of master artisans who pour their heart into every stitch.</p>
-            <div class="features">
-                <div class="feature">
-                    <div class="feature-icon">✦</div>
-                    <span>Handcrafted Excellence</span>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">◆</div>
-                    <span>Premium Fabrics</span>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">✦</div>
-                    <span>Worldwide Shipping</span>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">◆</div>
-                    <span>Custom Tailoring</span>
+            <div class="story-visual">
+                <div class="emblem">
+                    <h3>✦ LAQAB ✦</h3>
+                    <p>Premium Indian Wedding Embroidery — Handcrafted with Heritage</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section class="products" id="products">
-        <div class="section-header">
-            <p class="section-subtitle">Featured</p>
-            <h2 class="section-title">Bestsellers</h2>
-        </div>
-        <div class="product-grid">
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1598808503746-f34c53b9323e?w=500&q=80" alt="Royal Sherwani">
-                    <span class="product-badge">Bestseller</span>
+    <!-- PRODUCTS -->
+    <section id="products">
+        <div class="inner">
+            <div class="section-tag">Our Collection</div>
+            <h2 class="section-title">Embroidered to Perfection</h2>
+            <p class="section-desc">Each piece is handcrafted by master karigar using traditional zari, gota, and chikankari techniques. Custom orders welcome.</p>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="icon">👔</div>
+                    <h3>Premium Sherwani</h3>
+                    <div class="price">$500 – $5,000</div>
+                    <p>Heavy embroidered sherwanis with gold/silver zari work. Custom sizing, multiple embroidery styles available. Perfect for the groom.</p>
                 </div>
-                <div class="product-info">
-                    <h3 class="product-name">Royal Gold Sherwani</h3>
-                    <p class="product-price">₹18,500 <span>₹24,000</span></p>
+                <div class="product-card">
+                    <div class="icon">🤵</div>
+                    <h3>Wedding Suits</h3>
+                    <div class="price">$800 – $3,000</div>
+                    <p>Indo-western suits with hand-embroidered collars, cuffs, and lapels. Fusion of traditional craft with modern silhouettes.</p>
                 </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=500&q=80" alt="Embroidered Kurta">
+                <div class="product-card">
+                    <div class="icon">🧥</div>
+                    <h3>Indo-Western Jackets</h3>
+                    <div class="price">$600 – $2,500</div>
+                    <p>Statement jackets with intricate embroidery — perfect for the wedding reception or mehendi function.</p>
                 </div>
-                <div class="product-info">
-                    <h3 class="product-name">Embroidered Kurta</h3>
-                    <p class="product-price">₹4,500</p>
+                <div class="product-card">
+                    <div class="icon">🧣</div>
+                    <h3>Accessories</h3>
+                    <div class="price">$50 – $500</div>
+                    <p>Pagri (turban), dupatta borders, safa, embroidered pocket squares, and cufflinks to complete the look.</p>
                 </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=80" alt="Wedding Sherwani">
-                    <span class="product-badge">New</span>
+                <div class="product-card">
+                    <div class="icon">🪡</div>
+                    <h3>Custom Embroidery</h3>
+                    <div class="price">Custom Quote</div>
+                    <p>Bring your own design. Our karigar can reproduce any pattern — monograms, family crests, custom motifs. Anything is possible.</p>
                 </div>
-                <div class="product-info">
-                    <h3 class="product-name">Velvet Wedding Sherwani</h3>
-                    <p class="product-price">₹28,000</p>
-                </div>
-            </div>
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="https://images.unsplash.com/photo-1612178537253-bccd437b730e?w=500&q=80" alt="Festive Kurta Set">
-                </div>
-                <div class="product-info">
-                    <h3 class="product-name">Festive Kurta Set</h3>
-                    <p class="product-price">₹6,500 <span>₹8,500</span></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="section-header">
-            <p class="section-subtitle">Testimonials</p>
-            <h2 class="section-title">What Our Clients Say</h2>
-        </div>
-        <div class="testimonial-grid">
-            <div class="testimonial-card">
-                <p class="testimonial-text">"Got my wedding sherwani from Laqab and received countless compliments. The quality of embroidery was exceptional!"</p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">RK</div>
-                    <div>
-                        <p class="testimonial-name">Rahul Kapoor</p>
-                        <p class="testimonial-location">Mumbai</p>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <p class="testimonial-text">"The attention to detail is remarkable. Every piece tells a story of rich craftsmanship. Highly recommended for ethnic wear."</p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">AS</div>
-                    <div>
-                        <p class="testimonial-name">Arjun Sharma</p>
-                        <p class="testimonial-location">Delhi</p>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <p class="testimonial-text">"Ordered from overseas and the delivery was seamless. The packaging was luxurious and the sherwani exceeded expectations."</p>
-                <div class="testimonial-author">
-                    <div class="testimonial-avatar">PM</div>
-                    <div>
-                        <p class="testimonial-name">Priyaan Mehta</p>
-                        <p class="testimonial-location">London, UK</p>
-                    </div>
+                <div class="product-card">
+                    <div class="icon">👗</div>
+                    <h3>Women's Wear</h3>
+                    <div class="price">$400 – $3,000</div>
+                    <p>Embroidered lehenga blouses, dupattas, and bridal accessories. Launching soon — join the waitlist on WhatsApp.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="contact-grid">
+    <!-- PROCESS -->
+    <section id="process">
+        <div class="inner">
+            <div class="section-tag">How It Works</div>
+            <h2 class="section-title">From Chat to Chest</h2>
+            <p class="section-desc">No store visits. No middlemen. Just you, us, and master artisans — connected through WhatsApp.</p>
+            
+            <div class="process-steps">
+                <div class="step">
+                    <h4>You Reach Out</h4>
+                    <p>Message us on WhatsApp. Tell us the event, your budget, and style preferences.</p>
+                </div>
+                <div class="step">
+                    <h4>We Share Catalog</h4>
+                    <p>We send design options, fabric swatches, and past work photos within minutes.</p>
+                </div>
+                <div class="step">
+                    <h4>Custom Consultation</h4>
+                    <p>For premium orders ($1,500+), we do a video consultation to capture every detail.</p>
+                </div>
+                <div class="step">
+                    <h4>Artisans Craft It</h4>
+                    <p>Your piece is handcrafted by master karigar. We send WIP photos every few days.</p>
+                </div>
+                <div class="step">
+                    <h4>Delivered to You</h4>
+                    <p>Shipped to your doorstep — anywhere in the world. Quality checked before dispatch.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY LAQAB -->
+    <section id="why">
+        <div class="section-tag">Why LAQAB</div>
+        <h2 class="section-title">The LAQAB Difference</h2>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="num">100–300</div>
+                <h4>Master Artisans</h4>
+                <p>Direct access to Lucknow's finest karigar — no middleman markups.</p>
+            </div>
+            <div class="why-card">
+                <div class="num">60%+</div>
+                <h4>Cost Savings</h4>
+                <p>Compare to retail showroom pricing. You pay for the craft, not the rent.</p>
+            </div>
+            <div class="why-card">
+                <div class="num">2 Weeks</div>
+                <h4>Avg. Turnaround</h4>
+                <p>From first message to your doorstep — faster than most local tailors.</p>
+            </div>
+            <div class="why-card">
+                <div class="num">📱</div>
+                <h4>100% WhatsApp</h4>
+                <p>No store visits. No appointments. Everything happens on your phone.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials">
+        <div class="inner">
+            <div class="section-tag">What Our Clients Say</div>
+            <h2 class="section-title">Trusted by Brides & Grooms Worldwide</h2>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <div class="quote">"The sherwani was absolutely stunning. Every single guest asked where I got it made. The embroidery detail was beyond what I imagined."</div>
+                    <div class="author">— Rahul S.</div>
+                    <div class="role">Wedding, Dubai | May 2026</div>
+                </div>
+                <div class="testimonial">
+                    <div class="quote">"I was sceptical about ordering wedding clothes on WhatsApp, but LAQAB sent regular updates and the final product exceeded my expectations. Will order again for my brother's wedding."</div>
+                    <div class="author">— Arjun M.</div>
+                    <div class="role">Engagement, London | April 2026</div>
+                </div>
+                <div class="testimonial">
+                    <div class="quote">"The custom embroidery for my reception jacket was exactly what I wanted. They replicated my family crest perfectly. Unbelievable quality for the price."</div>
+                    <div class="author">— Vikram K.</div>
+                    <div class="role">Wedding, Ahmedabad | March 2026</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="inner">
+            <div class="section-tag">Get Started</div>
+            <h2 class="section-title">Your Wedding,<br>One Message Away</h2>
+            <p class="section-desc">Drop us a message on WhatsApp and we'll take it from there. No forms, no fuss — just great craft.</p>
+            
+            <div class="contact-actions">
+                <a href="https://wa.me/919987314177?text=Namaste!%20Main%20LAQAB%20se%20wedding%20embroidery%20ke%20baare%20mein%20pochhna%20chahta%20hoon.%20Mujhe%20[kal/date]%20ke%20liye%20[product]%20chahiye%20tha%20-%20mera%20budget%20approximately%20[amount]%20hai." class="wa-btn" target="_blank">
+                    ✦ Chat on WhatsApp — Free Consultation
+                </a>
+                <a href="tel:+919987314177" class="phone-btn">📞 +91 99873 14177</a>
+            </div>
+            
             <div class="contact-info">
-                <h3>Get in Touch</h3>
-                <p>Have questions about our collections or need styling advice? We're here to help you find the perfect ethnic ensemble.</p>
-                <ul class="contact-details">
-                    <li>
-                        <div class="contact-icon">✉</div>
-                        <span>laqabinfo@gmail.com</span>
-                    </li>
-                    <li>
-                        <div class="contact-icon">🌍</div>
-                        <span>Worldwide Shipping Available</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="contact-form">
-                <form>
-                    <div class="form-group">
-                        <label>Your Name</label>
-                        <input type="text" placeholder="Enter your name">
-                    </div>
-                    <div class="form-group">
-                        <label>Email Address</label>
-                        <input type="email" placeholder="Enter your email">
-                    </div>
-                    <div class="form-group">
-                        <label>Your Message</label>
-                        <textarea placeholder="How can we help you?"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
+                <div>
+                    <div class="label">Location</div>
+                    <div class="value">Lucknow, India</div>
+                </div>
+                <div>
+                    <div class="label">Turnaround</div>
+                    <div class="value">7–14 Days</div>
+                </div>
+                <div>
+                    <div class="label">Shipping</div>
+                    <div class="value">Worldwide ✈️</div>
+                </div>
+                <div>
+                    <div class="label">Payment</div>
+                    <div class="value">Razorpay / Stripe</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer>
-        <div class="footer-top">
-            <div class="footer-brand">
-                <a href="#" class="logo">LAQAB</a>
-                <p>Premium ethnic menswear crafted with tradition and elegance. Serving gentlemen worldwide with the finest sherwanis, kurtas, and wedding wear.</p>
-                <div class="social-links">
-                    <a href="#" class="social-link">f</a>
-                    <a href="#" class="social-link">in</a>
-                    <a href="#" class="social-link">ig</a>
-                </div>
-            </div>
-            <div class="footer-column">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#collections">Collections</a></li>
-                    <li><a href="#products">Shop</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Collections</h4>
-                <ul>
-                    <li><a href="#">Sherwani</a></li>
-                    <li><a href="#">Wedding Wear</a></li>
-                    <li><a href="#">Festival Collection</a></li>
-                    <li><a href="#">Kurtas</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Contact</h4>
-                <ul>
-                    <li><a href="mailto:laqabinfo@gmail.com">laqabinfo@gmail.com</a></li>
-                    <li><a href="#">Worldwide Shipping</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Laqab. All rights reserved.</p>
-            <p>Premium Ethnic Menswear</p>
-        </div>
+        <div class="logo">LA<span style="color:#C8A45C;">Q</span>AB</div>
+        <p>Premium Indian Wedding Embroidery — Handcrafted by Master Artisans</p>
+        <p style="margin-top:8px;">© 2026 LAQAB. Lucknow · Ahmedabad · Dubai</p>
     </footer>
 
+    <!-- WhatsApp Floating Button -->
+    <div style="position:fixed;bottom:24px;right:24px;z-index:9999;">
+        <a href="https://wa.me/919987314177?text=Namaste!%20Main%20LAQAB%20se%20pochhna%20chahta%20hoon." target="_blank"
+           style="display:flex;align-items:center;justify-content:center;width:60px;height:60px;background:#25D366;border-radius:50%;box-shadow:0 8px 24px rgba(37,211,102,0.3);transition:all 0.3s;text-decoration:none;font-size:28px;"
+           onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+           💬
+        </a>
+    </div>
+
     <script>
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 100) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Mobile menu toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navLinks = document.querySelector('.nav-links');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    navLinks.classList.remove('active');
-                }
+                const target = document.querySelector(a.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         });
     </script>
