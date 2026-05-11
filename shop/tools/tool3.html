@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume Score Checker – LAQAB</title>
+<meta name="description" content="Analyze your resume instantly. Get scores for length, action verbs, keyword density, and section completeness. Free basic score. Premium detailed rewrite suggestions.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Resume Score Checker – LAQAB Tools">
+<meta property="og:description" content="Check your resume score for free. Length, action verbs, keywords, and section analysis. Premium unlocks detailed rewrite suggestions.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kaifashraff.github.io/laqab/shop/tools/tool3.html">
+<meta property="og:image" content="https://kaifashraff.github.io/laqab/assets/og-resume.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Resume Score Checker – LAQAB">
+<meta name="twitter:description" content="Free resume analysis tool. Get your score in seconds.">
+<link rel="canonical" href="https://kaifashraff.github.io/laqab/shop/tools/tool3.html">
+<style>
+:root{--bg:#0a0a0a;--card:#1a1a1a;--gold:#d4a530;--gold-dim:#b88920;--text:#e0e0e0;--text-dim:#888;--radius:16px;--shadow:0 8px 32px rgba(0,0,0,0.5);--green:#2ecc71;--orange:#e67e22;--red:#e74c3c}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column;line-height:1.6}
+a{color:var(--gold);text-decoration:none}
+.container{max-width:800px;width:100%;margin:0 auto;padding:20px}
+.header{text-align:center;padding:40px 20px 20px}
+.header .logo{font-size:1.8rem;font-weight:800;letter-spacing:-0.5px}
+.header .logo span{color:var(--gold)}
+.header p{color:var(--text-dim);font-size:0.95rem;margin-top:6px}
+.card{background:var(--card);border:1px solid #2a2a2a;border-radius:var(--radius);padding:30px;margin-bottom:24px;box-shadow:var(--shadow);transition:border-color 0.3s}
+.card:hover{border-color:#3a3a3a}
+.card h2{font-size:1.25rem;margin-bottom:16px;color:var(--gold);display:flex;align-items:center;gap:8px}
+.card h2 .icon{font-size:1.3rem}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-size:0.85rem;color:var(--text-dim);margin-bottom:5px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px}
+.form-group textarea{width:100%;background:#0f0f0f;border:1px solid #2a2a2a;border-radius:10px;padding:12px 16px;color:var(--text);font-size:0.95rem;transition:border-color 0.3s,box-shadow 0.3s;resize:vertical;min-height:200px;font-family:inherit}
+.form-group textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 2px rgba(212,165,48,0.15)}
+.form-group textarea::placeholder{color:#555}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 32px;border-radius:12px;font-size:1rem;font-weight:700;border:none;cursor:pointer;transition:all 0.3s;text-decoration:none}
+.btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold-dim));color:#0a0a0a}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(212,165,48,0.3)}
+.btn-outline{background:transparent;border:2px solid var(--gold);color:var(--gold)}
+.btn-outline:hover{background:rgba(212,165,48,0.1);transform:translateY(-2px)}
+.btn-whatsapp{background:#25D366;color:#fff}
+.btn-whatsapp:hover{background:#20bd5a;transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,211,102,0.3)}
+.btn-block{width:100%}
+.btn-sm{padding:10px 20px;font-size:0.85rem}
+.badge{display:inline-block;background:rgba(212,165,48,0.15);color:var(--gold);padding:4px 12px;border-radius:20px;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:10px}
+.premium-upsell{background:linear-gradient(135deg,rgba(212,165,48,0.08),rgba(212,165,48,0.03));border:1px solid rgba(212,165,48,0.25);border-radius:var(--radius);padding:28px;text-align:center;margin-top:24px}
+.premium-upsell .crown{font-size:2.2rem;margin-bottom:8px}
+.premium-upsell h3{font-size:1.2rem;color:var(--gold);margin-bottom:6px}
+.premium-upsell p{color:var(--text-dim);font-size:0.9rem;margin-bottom:16px;max-width:450px;margin-left:auto;margin-right:auto}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;margin-bottom:20px}
+.stat-card{background:#0f0f0f;border:1px solid #2a2a2a;border-radius:10px;padding:16px;text-align:center}
+.stat-card .num{font-size:1.5rem;font-weight:800;color:var(--gold)}
+.stat-card .label{font-size:0.75rem;color:var(--text-dim);margin-top:2px;text-transform:uppercase;letter-spacing:0.3px}
+/* Score Gauge */
+.score-gauge{text-align:center;padding:20px 0;margin-bottom:16px}
+.score-circle{width:120px;height:120px;border-radius:50%;background:conic-gradient(var(--gold) 0deg,#2a2a2a 0deg);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;position:relative}
+.score-circle-inner{width:100px;height:100px;border-radius:50%;background:var(--card);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.score-circle-inner .score-num{font-size:2rem;font-weight:800;color:var(--gold)}
+.score-circle-inner .score-label{font-size:0.7rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:1px}
+.score-letter{font-size:1.2rem;font-weight:700;margin-top:4px}
+.score-letter.a{color:var(--green)}.score-letter.b{color:var(--gold)}.score-letter.c{color:var(--orange)}.score-letter.d{color:var(--red)}.score-letter.f{color:var(--red)}
+/* Metric bars */
+.metric-bar-wrap{margin-bottom:14px}
+.metric-bar-label{display:flex;justify-content:space-between;font-size:0.85rem;margin-bottom:4px}
+.metric-bar-label .name{color:var(--text)}.metric-bar-label .score{color:var(--gold);font-weight:700}
+.metric-bar{height:8px;background:#2a2a2a;border-radius:4px;overflow:hidden}
+.metric-bar-fill{height:100%;border-radius:4px;transition:width 0.8s ease;width:0%}
+.metric-bar-fill.green{background:var(--green)}.metric-bar-fill.gold{background:var(--gold)}.metric-bar-fill.orange{background:var(--orange)}.metric-bar-fill.red{background:var(--red)}
+/* Detail items */
+.detail-list{list-style:none;padding:0}
+.detail-list li{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid #2a2a2a;font-size:0.9rem}
+.detail-list li:last-child{border-bottom:none}
+.detail-list li .check{flex-shrink:0;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.7rem;margin-top:2px}
+.detail-list li .check.ok{background:rgba(46,204,113,0.15);color:var(--green)}
+.detail-list li .check.warn{background:rgba(230,126,34,0.15);color:var(--orange)}
+.detail-list li .check.bad{background:rgba(231,76,60,0.15);color:var(--red)}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes slideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fillBar{from{width:0%}}
+.animate-in{animation:slideUp 0.5s ease forwards;opacity:0}
+.delay-1{animation-delay:0.1s}
+.delay-2{animation-delay:0.2s}
+.delay-3{animation-delay:0.3s}
+.delay-4{animation-delay:0.4s}
+.footer{text-align:center;padding:30px 20px;color:var(--text-dim);font-size:0.8rem;border-top:1px solid #1a1a1a;margin-top:40px}
+.toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:var(--card);border:1px solid var(--gold);padding:14px 24px;border-radius:12px;color:var(--gold);font-size:0.9rem;font-weight:600;box-shadow:0 8px 32px rgba(0,0,0,0.6);opacity:0;transition:opacity 0.4s;pointer-events:none;z-index:999}
+.toast.show{opacity:1}
+@media(max-width:640px){.header{padding:30px 16px 16px}.header .logo{font-size:1.4rem}.card{padding:20px}.btn{padding:12px 24px;font-size:0.9rem}}
+@media(max-width:400px){.container{padding:12px}.card{padding:16px;border-radius:12px}}
+/* word count progress */
+.word-count-indicator{display:flex;justify-content:space-between;font-size:0.8rem;color:var(--text-dim);margin-top:6px}
+.word-count-indicator .count{color:var(--gold);font-weight:600}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header class="header animate-in">
+    <div class="logo">LAQAB <span>✦</span> Tools</div>
+    <p>Resume Score Checker</p>
+  </header>
+
+  <div class="card animate-in delay-1">
+    <div class="badge">✦ Free Tool</div>
+    <h2><span class="icon">📄</span> Analyze Your Resume</h2>
+    <p style="color:var(--text-dim);font-size:0.9rem;margin-bottom:18px">Paste your resume text below. Our analyzer checks length, action verbs, keyword density, and section completeness. <strong style="color:var(--gold)">Premium</strong> delivers a full rewrite-ready report.</p>
+
+    <div class="form-group">
+      <label>📋 Paste Your Resume Text</label>
+      <textarea id="resumeText" placeholder="Paste your resume content here...
+
+Example:
+Experienced marketing professional with 5+ years in digital strategy. Managed campaigns that increased revenue by 30%. Proficient in SEO, SEM, Google Analytics, and content marketing. Led a team of 4 junior marketers..."></textarea>
+      <div class="word-count-indicator"><span>Word count: <span class="count" id="wordCount">0</span></span><span>Recommended: 300–600</span></div>
+    </div>
+
+    <button class="btn btn-primary btn-block" onclick="analyzeResume()">📊 Analyze Resume</button>
+  </div>
+
+  <!-- RESULTS -->
+  <div class="card animate-in delay-2" id="outputCard" style="display:none">
+    <h2><span class="icon">📊</span> Your Resume Score</h2>
+
+    <div class="score-gauge">
+      <div class="score-circle" id="scoreCircle">
+        <div class="score-circle-inner">
+          <div class="score-num" id="overallScore">0</div>
+          <div class="score-label">/ 100</div>
+        </div>
+      </div>
+      <div class="score-letter" id="scoreLetter">—</div>
+    </div>
+
+    <div style="margin-bottom:20px">
+      <h3 style="font-size:0.95rem;color:var(--text-dim);margin-bottom:12px;text-transform:uppercase;letter-spacing:0.5px">Category Breakdown</h3>
+      <div id="metricsBreakdown"></div>
+    </div>
+
+    <div style="margin-bottom:16px">
+      <h3 style="font-size:0.95rem;color:var(--text-dim);margin-bottom:12px;text-transform:uppercase;letter-spacing:0.5px">Detailed Findings</h3>
+      <ul class="detail-list" id="detailList"></ul>
+    </div>
+
+    <div style="background:#0f0f0f;border:1px solid #2a2a2a;border-radius:10px;padding:16px;margin-bottom:16px">
+      <p style="color:var(--text-dim);font-size:0.85rem"><strong style="color:var(--gold)">Word count:</strong> <span id="finalWordCount">0</span> words &nbsp;|&nbsp; <strong style="color:var(--gold)">Action verbs:</strong> <span id="finalVerbCount">0</span> found &nbsp;|&nbsp; <strong style="color:var(--gold)">Sections:</strong> <span id="finalSectionCount">0</span>/5 complete</p>
+    </div>
+
+    <!-- Premium Upsell -->
+    <div class="premium-upsell">
+      <div class="crown">👑</div>
+      <h3>Unlock Premium — $5 via WhatsApp</h3>
+      <p>Get a <strong>detailed professional report</strong> with line-by-line rewrite suggestions, ATS compatibility scoring, missing keyword recommendations, bullet-point reformatting, and a rewritten resume template tailored to your industry.</p>
+      <a href="https://wa.me/919987314177?text=I%20want%20premium%20Resume%20Score%20Checker" target="_blank" rel="noopener" class="btn btn-whatsapp btn-block">💬 Unlock Premium — $5 via WhatsApp</a>
+    </div>
+  </div>
+
+  <div class="card animate-in delay-3">
+    <h2><span class="icon">✅</span> What We Check</h2>
+    <div class="stats-grid">
+      <div class="stat-card"><div class="num">📏</div><div class="label">Length Score</div></div>
+      <div class="stat-card"><div class="num">🏃</div><div class="label">Action Verbs</div></div>
+      <div class="stat-card"><div class="num">🔑</div><div class="label">Keywords</div></div>
+      <div class="stat-card"><div class="num">📂</div><div class="label">Sections</div></div>
+    </div>
+    <p style="color:var(--text-dim);font-size:0.85rem">Free version gives overall score, category breakdowns, and basic findings. Premium gives <strong>rewritten bullet points, ATS keyword gaps, and a complete resume template</strong> matching your profile.</p>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>LAQAB — Premium Digital Tools. <a href="https://wa.me/919987314177" target="_blank">Contact us on WhatsApp</a></p>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const actionVerbs=['achieved','accelerated','accomplished','acquired','adapted','addressed','administered','advanced','advertised','advised','allocated','analyzed','applied','architected','arranged','assembled','assessed','assigned','assisted','attained','audited','authored','authorized','automated','built','calculated','catalyzed','chaired','championed','changed','clarified','classified','coached','collaborated','combined','commissioned','communicated','compared','compiled','completed','composed','computed','conceived','conceptualized','concluded','condensed','conducted','configured','confirmed','connected','consolidated','constructed','consulted','continued','contracted','contributed','controlled','converted','convinced','coordinated','copied','corrected','correlated','counseled','created','critiqued','cultivated','customized','decreased','dedicated','defined','delegated','delivered','demonstrated','depicted','deprecated','derived','designed','determined','developed','devised','diagnosed','directed','discovered','dispatched','displayed','distributed','diversified','documented','doubled','drafted','drove','earned','edited','educated','elected','eliminated','empowered','enabled','encouraged','endorsed','enforced','engineered','enhanced','established','estimated','evaluated','examined','exceeded','executed','exhibited','expanded','expedited','explored','extended','extracted','facilitated','finalized','financed','focused','forecasted','formulated','fortified','fostered','found','founded','framed','fulfilled','gained','gathered','generated','governed','graduated','grew','guided','hired','identified','illustrated','implemented','imported','improved','improvised','increased','incubated','influenced','informed','initiated','innovated','instituted','integrated','intensified','interpreted','interviewed','introduced','invented','invested','investigated','invited','involved','isolated','joined','judged','launched','led','leveraged','licensed','listened','logged','maintained','managed','manufactured','mapped','marketed','mastered','measured','mediated','mentored','merged','migrated','minimized','moderated','modified','monitored','motivated','moved','navigated','negotiated','netted','nurtured','observed','obtained','opened','operated','optimized','ordered','organized','orchestrated','outlined','outpaced','outsourced','overcame','overhauled','oversaw','participated','partnered','performed','persuaded','pioneered','planned','positioned','predicted','prepared','presented','preserved','presided','prioritized','probed','processed','procured','produced','programmed','progressed','projected','promoted','prompted','proofread','proposed','protected','provided','publicized','published','purchased','pursued','qualified','quantified','questioned','raised','ran','rated','realized','received','recommended','reconciled','recorded','recruited','rectified','redesigned','reduced','reengineered','referred','refined','reformed','regained','regulated','rehabilitated','reinforced','reinvigorated','rejected','remodeled','rendered','reorganized','repaired','replaced','replicated','reported','represented','reproduced','requested','rescued','researched','resolved','responded','restored','restructured','retained','retrieved','revamped','revealed','reversed','reviewed','revised','revitalized','saved','scheduled','screened','scrutinized','secured','selected','separated','served','settled','shaped','shared','shortened','showcased','shrank','shut','simplified','sketched','sold','solved','sorted','sparked','spearheaded','specified','spent','split','spoke','sponsored','spotlighted','stabilized','staffed','standardized','started','stimulated','streamlined','strengthened','structured','studied','submitted','substantiated','succeeded','suggested','summarized','supervised','supplied','supported','surpassed','surveyed','sustained','systematized','tabulated','targeted','taught','terminated','tested','took','trained','transcribed','transferred','transformed','translated','traveled','treated','trimmed','tripled','troubleshot','tutored','uncovered','understood','undertook','unified','united','updated','upgraded','upheld','used','utilized','validated','valued','verbalized','verified','visioned','visualized','weighed','widened','won','worked','wrote'];
+
+const sections=['education','experience','skills','summary','certifications'];
+const sectionAliases={
+  education:['education','academic','university','college','degree','bachelor','master','phd','school','diploma'],
+  experience:['experience','work','employment','professional','career','job','internship','volunteer','position'],
+  skills:['skills','expertise','competencies','proficiencies','technologies','tools','languages','technical'],
+  summary:['summary','objective','profile','about','professional summary','career objective','personal statement','highlights'],
+  certifications:['certifications','certificates','licenses','credentials','accreditations','courses','training']
+};
+
+let wordCount=0;
+document.getElementById('resumeText').addEventListener('input',function(){
+  const text=this.value.trim();
+  wordCount=text?text.split(/\s+/).length:0;
+  document.getElementById('wordCount').textContent=wordCount;
+});
+
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+
+function analyzeResume(){
+  const text=document.getElementById('resumeText').value.trim();
+  if(!text||text.split(/\s+/).length<10){showToast('⚠️ Please paste at least 10 words of resume text.');return}
+
+  const words=text.split(/\s+/);
+  const lower=text.toLowerCase();
+  const wc=words.length;
+
+  // Length score (ideal: 300-600 words)
+  let lengthScore=0;
+  if(wc>=250&&wc<=700) lengthScore=100;
+  else if(wc>=150&&wc<250) lengthScore=70;
+  else if(wc>700&&wc<=900) lengthScore=60;
+  else if(wc>=80&&wc<150) lengthScore=40;
+  else lengthScore=20;
+
+  // Action verb score (ideal: 10+ unique verbs)
+  const verbsFound=[];
+  words.forEach(w=>{
+    const clean=w.replace(/[^a-zA-Z]/g,'').toLowerCase();
+    if(actionVerbs.includes(clean)&&!verbsFound.includes(clean)) verbsFound.push(clean);
+  });
+  const verbCount=verbsFound.length;
+  let verbScore=Math.min(100,verbCount*10);
+  if(verbCount>=12) verbScore=100;
+  else if(verbCount>=8) verbScore=80;
+  else if(verbCount>=5) verbScore=60;
+  else if(verbCount>=3) verbScore=40;
+  else verbScore=20;
+
+  // Keyword density - common resume keywords
+  const keywordScores={
+    'managed':8,'led':8,'developed':9,'created':8,'implemented':9,'improved':8,'increased':8,'reduced':7,'achieved':9,'delivered':8,
+    'strategy':7,'result':7,'team':6,'project':6,'revenue':7,'growth':7,'client':6,'budget':7,'analysis':6,'optimized':8,
+    'launched':7,'designed':7,'coordinated':6,'established':7,'directed':7,'trained':6,'supervised':6,'mentored':6,'presented':5,'published':5
+  };
+  let kwScore=0;
+  let kwFound=0;
+  Object.entries(keywordScores).forEach(([kw,pts])=>{
+    const re=new RegExp('\\b'+kw+'\\b','gi');
+    if(re.test(text)){kwScore+=pts;kwFound++;}
+  });
+  let keywordScore=Math.min(100,Math.round((kwScore/70)*100));
+
+  // Section completeness
+  let foundSections=[];
+  sections.forEach(sec=>{
+    const aliases=sectionAliases[sec];
+    let found=false;
+    aliases.forEach(alias=>{
+      const re=new RegExp('\\b'+alias.replace(/[^a-z]/g,'')+'\\b','i');
+      if(re.test(lower)) found=true;
+    });
+    if(found) foundSections.push(sec);
+  });
+  const sectionCount=foundSections.length;
+  let sectionScore=Math.round((sectionCount/5)*100);
+
+  // Overall score (weighted)
+  const overall=Math.round(lengthScore*0.25+verbScore*0.3+keywordScore*0.2+sectionScore*0.25);
+
+  // Letter grade
+  let letter='F';
+  if(overall>=90) letter='A';
+  else if(overall>=75) letter='B';
+  else if(overall>=60) letter='C';
+  else if(overall>=45) letter='D';
+  else letter='F';
+
+  // Render circle
+  const deg=Math.round((overall/100)*360);
+  const circle=document.getElementById('scoreCircle');
+  circle.style.background=`conic-gradient(var(--gold) ${deg}deg, #2a2a2a ${deg}deg)`;
+  document.getElementById('overallScore').textContent=overall;
+  document.getElementById('scoreLetter').textContent=`${letter} — ${overall>=75?'Strong':overall>=60?'Average':overall>=45?'Needs Work':'Needs Major Improvement'}`;
+  document.getElementById('scoreLetter').className=`score-letter ${letter.toLowerCase()}`;
+
+  // Metrics breakdown
+  const metrics=[
+    {name:'Length & Structure',score:lengthScore,desc:`${wc} words (ideal: 300-600)`,color:lengthScore>=70?'green':lengthScore>=40?'orange':'red'},
+    {name:'Action Verbs',score:verbScore,desc:`${verbCount} unique action verbs found (ideal: 10+)`,color:verbScore>=70?'green':verbScore>=40?'orange':'red'},
+    {name:'Keyword Density',score:keywordScore,desc:`${kwFound} relevant keywords matched`,color:keywordScore>=60?'green':keywordScore>=35?'orange':'red'},
+    {name:'Section Completeness',score:sectionScore,desc:`${sectionCount}/5 sections found`,color:sectionScore>=60?'green':sectionScore>=40?'orange':'red'}
+  ];
+
+  const breakdown=document.getElementById('metricsBreakdown');
+  breakdown.innerHTML='';
+  metrics.forEach((m,i)=>{
+    const wrapper=document.createElement('div');
+    wrapper.className='metric-bar-wrap';
+    wrapper.innerHTML=`
+      <div class="metric-bar-label"><span class="name">${m.name}</span><span class="score">${m.score}%</span></div>
+      <div class="metric-bar"><div class="metric-bar-fill ${m.color}" style="width:0%" data-target="${m.score}"></div></div>
+      <div style="font-size:0.78rem;color:var(--text-dim);margin-top:2px">${m.desc}</div>
+    `;
+    breakdown.appendChild(wrapper);
+  });
+
+  // Animate bars after render
+  setTimeout(()=>{
+    document.querySelectorAll('.metric-bar-fill').forEach(bar=>{
+      bar.style.width=bar.dataset.target+'%';
+    });
+  },100);
+
+  // Detail findings
+  const details=document.getElementById('detailList');
+  details.innerHTML='';
+  const findings=[];
+
+  // Length findings
+  if(wc<200) findings.push({type:'bad',text:`Resume is too short (${wc} words). Aim for 300–600 words to provide sufficient detail without being verbose.`});
+  else if(wc<300) findings.push({type:'warn',text:`Resume is on the shorter side (${wc} words). Consider expanding to 300+ words to showcase more impact.`});
+  else if(wc>700) findings.push({type:'warn',text:`Resume is lengthy (${wc} words). Consider trimming to 600 words or fewer for maximum recruiter engagement.`});
+  else findings.push({type:'ok',text:`Excellent length (${wc} words). Falls within the optimal 300–600 word range.`});
+
+  // Verb findings
+  if(verbCount<3) findings.push({type:'bad',text:`Only ${verbCount} action verbs found. Use strong action verbs like "managed", "delivered", "optimized" to start each bullet point.`});
+  else if(verbCount<6) findings.push({type:'warn',text:`${verbCount} action verbs found. Try to use 8+ unique action verbs across your resume.`});
+  else findings.push({type:'ok',text:`${verbCount} unique action verbs found — great for impactful bullet points.`});
+
+  // Section findings
+  if(sectionCount<3) findings.push({type:'bad',text:`Only ${sectionCount}/5 key sections detected. Include: Summary, Experience, Education, Skills, and Certifications.`});
+  else if(sectionCount<4) findings.push({type:'warn',text:`${sectionCount}/5 sections detected. Adding missing sections will improve ATS compatibility.`});
+  else findings.push({type:'ok',text:`${sectionCount}/5 sections detected — strong structure.`});
+
+  // Keyword findings
+  if(kwFound<5) findings.push({type:'bad',text:`Very few industry keywords detected. Add terms relevant to your target role.`});
+  else if(kwFound<10) findings.push({type:'warn',text:`${kwFound} keywords matched. Adding more role-specific keywords will improve ATS ranking.`});
+  else findings.push({type:'ok',text:`${kwFound} keywords matched — your resume is well-optimized for search.`});
+
+  findings.forEach(f=>{
+    const li=document.createElement('li');
+    const icon=f.type==='ok'?'✓':f.type==='warn'?'⚠':'✗';
+    li.innerHTML=`<span class="check ${f.type}">${icon}</span><span>${f.text}</span>`;
+    details.appendChild(li);
+  });
+
+  document.getElementById('finalWordCount').textContent=wc;
+  document.getElementById('finalVerbCount').textContent=verbCount;
+  document.getElementById('finalSectionCount').textContent=sectionCount;
+
+  document.getElementById('outputCard').style.display='block';
+  document.getElementById('outputCard').scrollIntoView({behavior:'smooth',block:'start'});
+  showToast('✅ Resume analyzed!');
+}
+</script>
+</body>
+</html>

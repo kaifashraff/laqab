@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instagram Caption Generator – LAQAB</title>
+<meta name="description" content="Generate engaging Instagram captions instantly. Choose your niche — wedding, fashion, business, food, or travel. Free: 3 captions. Premium: 50+ with hashtag sets.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Instagram Caption Generator – LAQAB Tools">
+<meta property="og:description" content="Create scroll-stopping Instagram captions in seconds. Free version gives 3 ready-to-use captions. Premium unlocks 50+ with curated hashtag packs.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kaifashraff.github.io/laqab/shop/tools/tool2.html">
+<meta property="og:image" content="https://kaifashraff.github.io/laqab/assets/og-instagram.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Instagram Caption Generator – LAQAB">
+<meta name="twitter:description" content="Generate Instagram captions for any niche. Free: 3 captions. Premium: 50+ with hashtags.">
+<link rel="canonical" href="https://kaifashraff.github.io/laqab/shop/tools/tool2.html">
+<style>
+:root{--bg:#0a0a0a;--card:#1a1a1a;--gold:#d4a530;--gold-dim:#b88920;--text:#e0e0e0;--text-dim:#888;--radius:16px;--shadow:0 8px 32px rgba(0,0,0,0.5)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column;line-height:1.6}
+a{color:var(--gold);text-decoration:none}
+.container{max-width:800px;width:100%;margin:0 auto;padding:20px}
+.header{text-align:center;padding:40px 20px 20px}
+.header .logo{font-size:1.8rem;font-weight:800;letter-spacing:-0.5px}
+.header .logo span{color:var(--gold)}
+.header p{color:var(--text-dim);font-size:0.95rem;margin-top:6px}
+.card{background:var(--card);border:1px solid #2a2a2a;border-radius:var(--radius);padding:30px;margin-bottom:24px;box-shadow:var(--shadow);transition:border-color 0.3s}
+.card:hover{border-color:#3a3a3a}
+.card h2{font-size:1.25rem;margin-bottom:16px;color:var(--gold);display:flex;align-items:center;gap:8px}
+.card h2 .icon{font-size:1.3rem}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-size:0.85rem;color:var(--text-dim);margin-bottom:5px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px}
+.form-group select,.form-group input{width:100%;background:#0f0f0f;border:1px solid #2a2a2a;border-radius:10px;padding:12px 16px;color:var(--text);font-size:0.95rem;transition:border-color 0.3s,box-shadow 0.3s}
+.form-group select:focus,.form-group input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 2px rgba(212,165,48,0.15)}
+.form-group select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23d4a530' d='M6 8L1 3h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px;cursor:pointer}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 32px;border-radius:12px;font-size:1rem;font-weight:700;border:none;cursor:pointer;transition:all 0.3s;text-decoration:none}
+.btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold-dim));color:#0a0a0a}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(212,165,48,0.3)}
+.btn-outline{background:transparent;border:2px solid var(--gold);color:var(--gold)}
+.btn-outline:hover{background:rgba(212,165,48,0.1);transform:translateY(-2px)}
+.btn-whatsapp{background:#25D366;color:#fff}
+.btn-whatsapp:hover{background:#20bd5a;transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,211,102,0.3)}
+.btn-block{width:100%}
+.btn-sm{padding:10px 20px;font-size:0.85rem}
+.badge{display:inline-block;background:rgba(212,165,48,0.15);color:var(--gold);padding:4px 12px;border-radius:20px;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:10px}
+.premium-upsell{background:linear-gradient(135deg,rgba(212,165,48,0.08),rgba(212,165,48,0.03));border:1px solid rgba(212,165,48,0.25);border-radius:var(--radius);padding:28px;text-align:center;margin-top:24px}
+.premium-upsell .crown{font-size:2.2rem;margin-bottom:8px}
+.premium-upsell h3{font-size:1.2rem;color:var(--gold);margin-bottom:6px}
+.premium-upsell p{color:var(--text-dim);font-size:0.9rem;margin-bottom:16px;max-width:450px;margin-left:auto;margin-right:auto}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;margin-bottom:20px}
+.stat-card{background:#0f0f0f;border:1px solid #2a2a2a;border-radius:10px;padding:16px;text-align:center}
+.stat-card .num{font-size:1.5rem;font-weight:800;color:var(--gold)}
+.stat-card .label{font-size:0.75rem;color:var(--text-dim);margin-top:2px;text-transform:uppercase;letter-spacing:0.3px}
+/* Caption Cards */
+.caption-card{background:#0f0f0f;border:1px solid #2a2a2a;border-radius:12px;padding:18px;margin-bottom:14px;transition:all 0.3s}
+.caption-card:hover{border-color:#3a3a3a}
+.caption-card .caption-text{font-size:0.95rem;line-height:1.7;margin-bottom:8px}
+.caption-card .caption-tags{display:flex;flex-wrap:wrap;gap:6px}
+.caption-card .caption-tags span{background:rgba(212,165,48,0.08);border:1px solid rgba(212,165,48,0.15);padding:3px 10px;border-radius:5px;font-size:0.7rem;color:var(--gold)}
+.caption-card .emoji-indicator{font-size:1.5rem;margin-right:6px}
+.caption-actions{display:flex;gap:8px;margin-top:10px}
+.caption-actions button{background:#2a2a2a;border:1px solid #3a3a3a;border-radius:8px;padding:6px 14px;color:var(--text);font-size:0.8rem;cursor:pointer;transition:all 0.3s}
+.caption-actions button:hover{background:#3a3a3a}
+.caption-actions button.copied{background:var(--gold);color:#0a0a0a;border-color:var(--gold)}
+/* Mood selector */
+.mood-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(70px,1fr));gap:8px;margin-bottom:18px}
+.mood-btn{padding:10px 6px;text-align:center;background:#0f0f0f;border:1px solid #2a2a2a;border-radius:10px;color:var(--text-dim);font-size:0.75rem;cursor:pointer;transition:all 0.3s}
+.mood-btn:hover{border-color:var(--gold);color:var(--gold)}
+.mood-btn.active{border-color:var(--gold);background:rgba(212,165,48,0.1);color:var(--gold);font-weight:700}
+.mood-btn .mood-icon{font-size:1.3rem;display:block;margin-bottom:2px}
+/* Toggle */
+.toggle-row{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.toggle-switch{position:relative;width:48px;height:26px;background:#2a2a2a;border-radius:13px;cursor:pointer;transition:background 0.3s;flex-shrink:0}
+.toggle-switch.active{background:var(--gold)}
+.toggle-switch::after{content:'';position:absolute;top:3px;left:3px;width:20px;height:20px;background:#fff;border-radius:50%;transition:transform 0.3s}
+.toggle-switch.active::after{transform:translateX(22px)}
+.toggle-label{font-size:0.85rem;color:var(--text-dim)}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes slideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.animate-in{animation:slideUp 0.5s ease forwards;opacity:0}
+.delay-1{animation-delay:0.1s}
+.delay-2{animation-delay:0.2s}
+.delay-3{animation-delay:0.3s}
+.delay-4{animation-delay:0.4s}
+.footer{text-align:center;padding:30px 20px;color:var(--text-dim);font-size:0.8rem;border-top:1px solid #1a1a1a;margin-top:40px}
+.toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:var(--card);border:1px solid var(--gold);padding:14px 24px;border-radius:12px;color:var(--gold);font-size:0.9rem;font-weight:600;box-shadow:0 8px 32px rgba(0,0,0,0.6);opacity:0;transition:opacity 0.4s;pointer-events:none;z-index:999}
+.toast.show{opacity:1}
+@media(max-width:640px){.header{padding:30px 16px 16px}.header .logo{font-size:1.4rem}.card{padding:20px}.btn{padding:12px 24px;font-size:0.9rem}.mood-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:400px){.container{padding:12px}.card{padding:16px;border-radius:12px}}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header class="header animate-in">
+    <div class="logo">LAQAB <span>✦</span> Tools</div>
+    <p>Instagram Caption Generator</p>
+  </header>
+
+  <div class="card animate-in delay-1">
+    <div class="badge">✦ Free Tool</div>
+    <h2><span class="icon">📝</span> Create Scroll-Stopping Captions</h2>
+    <p style="color:var(--text-dim);font-size:0.9rem;margin-bottom:18px">Pick your niche and mood. Get ready-to-post captions that drive engagement. Free: 3 handcrafted captions. Premium: 50+ with hashtag sets.</p>
+
+    <div class="form-group">
+      <label>📌 Niche</label>
+      <select id="nicheSelect">
+        <option value="wedding">💍 Wedding</option>
+        <option value="fashion">👗 Fashion</option>
+        <option value="business">💼 Business</option>
+        <option value="food">🍽️ Food</option>
+        <option value="travel">✈️ Travel</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>🎭 Mood / Vibe</label>
+      <div class="mood-grid" id="moodGrid">
+        <div class="mood-btn active" data-mood="inspiring"><span class="mood-icon">✨</span>Inspiring</div>
+        <div class="mood-btn" data-mood="funny"><span class="mood-icon">😂</span>Funny</div>
+        <div class="mood-btn" data-mood="professional"><span class="mood-icon">💎</span>Pro</div>
+        <div class="mood-btn" data-mood="romantic"><span class="mood-icon">❤️</span>Romantic</div>
+        <div class="mood-btn" data-mood="bold"><span class="mood-icon">🔥</span>Bold</div>
+      </div>
+    </div>
+
+    <div class="toggle-row">
+      <div class="toggle-switch active" id="emojiToggle" onclick="this.classList.toggle('active')"></div>
+      <span class="toggle-label">Include emojis in captions</span>
+    </div>
+
+    <button class="btn btn-primary btn-block" onclick="generateCaptions()">✨ Generate Captions</button>
+  </div>
+
+  <!-- OUTPUT -->
+  <div class="card animate-in delay-2" id="outputCard" style="display:none">
+    <h2><span class="icon">📋</span> Your Captions</h2>
+    <p style="color:var(--text-dim);font-size:0.85rem;margin-bottom:16px">Free: 3 captions shown. <strong style="color:var(--gold)">Premium unlocks 50+</strong> with niche-specific hashtag packs.</p>
+    <div id="captionList"></div>
+
+    <!-- Premium Upsell -->
+    <div class="premium-upsell">
+      <div class="crown">👑</div>
+      <h3>Unlock Premium — $5 via WhatsApp</h3>
+      <p>Get <strong>50+ unique captions</strong> per niche + curated hashtag sets (30–50 hashtags each) + carousel post ideas + story prompt templates. Built for content creators who post daily.</p>
+      <a href="https://wa.me/919987314177?text=I%20want%20premium%20Instagram%20Caption%20Generator" target="_blank" rel="noopener" class="btn btn-whatsapp btn-block">💬 Unlock Premium — $5 via WhatsApp</a>
+    </div>
+  </div>
+
+  <div class="card animate-in delay-3">
+    <h2><span class="icon">✅</span> What You Get</h2>
+    <div class="stats-grid">
+      <div class="stat-card"><div class="num">5</div><div class="label">Niches</div></div>
+      <div class="stat-card"><div class="num">5</div><div class="label">Moods</div></div>
+      <div class="stat-card"><div class="num">3</div><div class="label">Free Captions</div></div>
+      <div class="stat-card"><div class="num">50+</div><div class="label">Premium</div></div>
+    </div>
+    <p style="color:var(--text-dim);font-size:0.85rem">Each caption is tailored to your niche, mood, and emoji preference. Ready to paste directly into Instagram. Premium also includes viral hashtag strategies.</p>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>LAQAB — Premium Digital Tools. <a href="https://wa.me/919987314177" target="_blank">Contact us on WhatsApp</a></p>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const captionsDB={
+  wedding:{
+    inspiring:[
+      '"Love isn\'t something you find. Love is something that finds you." — Here\'s to forever 💍',
+      'Every love story is beautiful, but ours is my favourite. ✨ #WeddingDay',
+      'And so the adventure begins… Two hearts, one journey, infinite love. 💫',
+      'The day we said "I do" was just the beginning of our forever. ❤️',
+      'From this moment on, every sunrise is ours to share. 🌅 #MrAndMrs',
+      'Love is the bridge between two hearts — and today we cross it together. 💕'
+    ],
+    funny:[
+      'I asked for a fairy tale. I got a partner who steals the blankets. Still worth it. 😂💍',
+      'Marriage: when one person is always right, and the other is the husband. 😏',
+      'We put the "fun" in dysfunctional. But mostly the fun. 🥂 #JustMarried',
+      'Officially off the market. Sorry, everyone else — I\'m taken. 😎💍',
+      'Found my someone to annoy for the rest of my life. Lucky me. 😂❤️'
+    ],
+    professional:[
+      'Celebrating the union of two remarkable individuals. Here\'s to a lifetime of partnership and love. 🤝💍',
+      'A wedding is not just a ceremony — it\'s the foundation of a legacy. 🏛️✨',
+      'Elegance, grace, and a love that inspires. Wishing you a lifetime of happiness. 🥂',
+      'A day of joy, a promise of forever. Congratulations to the happy couple. 💫',
+      'Every great love story deserves a grand beginning. Yours was unforgettable. 🌟'
+    ],
+    romantic:[
+      'In your eyes, I found my home. In your heart, I found my peace. 💕✨',
+      'Every beat of my heart whispers your name. Forever yours. ❤️',
+      'You are the poetry my heart has been writing all along. 📝💗',
+      'I loved you yesterday, I love you still, I always have, I always will. 💞',
+      'The best thing to hold onto in life is each other. — Audrey Hepburn 💫'
+    ],
+    bold:[
+      'We didn\'t just plan a wedding. We planned a power couple. 🔥💍',
+      'This is not the end of a chapter. This is the beginning of a dynasty. 👑',
+      'Love that\'s bold enough to break rules deserves to be celebrated. 💥❤️',
+      'They said it wouldn\'t last. Watch us prove them wrong. 😤💪',
+      'We came. We loved. We conquered. 🔥 #PowerCouple'
+    ]
+  },
+  fashion:{
+    inspiring:[
+      'Style is a way to say who you are without having to speak. — Rachel Zoe ✨',
+      'Fashion fades, but style is eternal. — Yves Saint Laurent 👗',
+      'Dress like you\'re already famous. 👑 #OOTD',
+      'Your outfit is a self-portrait. Make it a masterpiece. 🎨',
+      'Elegance is not standing out, but being remembered. 💫'
+    ],
+    funny:[
+      'My wallet is crying but my outfit is fire. 🔥💸 #FashionAddict',
+      'I have enough clothes to survive 3 apocalypses. Send help. 😂👗',
+      'Dressed like I have my life together. Spoiler: I don\'t. 😏',
+      'Retail therapy: because sometimes you need to buy happiness. 🛍️💕',
+      'My closet called. It said I need more shoes. Who am I to argue? 👠😎'
+    ],
+    professional:[
+      'Power dressing isn\'t just about clothes — it\'s about confidence. 💼✨',
+      'First impressions are made in 7 seconds. Make yours unforgettable. 👔',
+      'Dress for the job you want. Execute for the life you deserve. 🎯',
+      'Professional style: where sophistication meets strategy. 📊👗',
+      'Your personal brand starts with what you wear. Build it wisely. 🌟'
+    ],
+    romantic:[
+      'A dress is a work of art. Every fold tells a love story. 💕👗',
+      'Soft fabrics, gentle hues — wearing my heart on my sleeve. 💗',
+      'There\'s something magical about a dress that makes you feel beautiful. ✨',
+      'Fashion is the armor to survive the reality of everyday life. — Bill Cunningham 💫',
+      'In a world full of trends, remain a classic. 🌹'
+    ],
+    bold:[
+      'I don\'t follow trends. I set them. 🔥👑',
+      'If you can\'t handle me in couture, you don\'t deserve me in sweatpants. 😤💅',
+      'Not everyone\'s cup of tea. I\'m champagne. 🥂✨',
+      'Bow down. The runway is mine. 👠🔥',
+      'Too glam to give a damn. 💎😎'
+    ]
+  },
+  business:{
+    inspiring:[
+      'Success is not final, failure is not fatal: it is the courage to continue that counts. 💼✨',
+      'Build your empire from the ground up. Every brick matters. 🏗️💪',
+      'The secret to getting ahead is getting started. — Mark Twain 🚀',
+      'Your business is a reflection of your mindset. Level up. 📈',
+      'Dream big. Start small. Act now. ⏳💼'
+    ],
+    funny:[
+      'I\'m not a workaholic. I\'m just addicted to success. With a side of coffee. ☕😅',
+      'My business plan: work hard, nap harder. 💤💼',
+      'I\'d be a millionaire already if procrastination paid. 😂📉',
+      'Boss status: reached. Sleep status: pending. 😴💪',
+      'My 9-to-5 is actually 5-to-9. But I\'m the boss, so it\'s fine. 😎'
+    ],
+    professional:[
+      'Excellence is not a skill. It\'s an attitude. 📊✨',
+      'Strategy without execution is just a wish. Make it happen. 🎯',
+      'Your network is your net worth. Invest wisely. 🤝💼',
+      'Consistency compounds. Show up every day. 🔄📈',
+      'Data drives decisions. Intuition drives breakthroughs. 🧠'
+    ],
+    romantic:[
+      'Falling in love with the process is the first step to success. 💕📈',
+      'Your business is your baby. Nurture it, grow it, watch it thrive. 👶💼',
+      'Passion is the fuel. Purpose is the destination. ❤️🚀',
+      'When you love what you do, Monday doesn\'t exist. 💗✨',
+      'The best investment you can make is in yourself. 💞'
+    ],
+    bold:[
+      'I didn\'t come this far to only come this far. 🔥💼',
+      'While they sleep, I grind. While they talk, I build. 😤🏗️',
+      'Mediocrity is not in my vocabulary. Excellence or nothing. 💎',
+      'They laughed when I started. Watch them cheer when I finish. 👑',
+      'Bold moves create big results. Play to win. 🏆'
+    ]
+  },
+  food:{
+    inspiring:[
+      'Good food is the foundation of genuine happiness. — Auguste Escoffier 🍽️✨',
+      'Cooking is an act of love. Every dish tells a story. 💕🍝',
+      'Life is a combination of magic and pasta. 🍝✨',
+      'Food is not just fuel. It\'s experience, culture, and connection. 🌍🍴',
+      'The only thing I take seriously is food. And dessert. 🍰😌'
+    ],
+    funny:[
+      'I followed my heart. It led me to the fridge. 🚶‍♂️🧊😅',
+      'My diet plan: eat everything, regret nothing. 😂🍕',
+      'Calories don\'t count on weekends. Or weekdays. Actually, they just don\'t count. 🤷‍♀️🍔',
+      'I\'m in a committed relationship with food. Don\'t judge. 💍🍟',
+      'Carbs are not the enemy. They\'re emotional support. 🥐💕'
+    ],
+    professional:[
+      'Precision, presentation, perfection — the hallmarks of great cuisine. 👨‍🍳✨',
+      'A well-plated dish is a work of art. Taste is the masterpiece. 🎨🍽️',
+      'Quality ingredients, honest technique, unforgettable flavour. 🌟',
+      'Culinary excellence is in the details. Every garnish matters. 🔍🥗',
+      'From farm to table — traceability is the new luxury. 🌱🍴'
+    ],
+    romantic:[
+      'Made with love. Served with passion. ❤️🍝',
+      'There is no love sincerer than the love of food. — George Bernard Shaw 💕',
+      'Cooking for someone is the most intimate form of care. 💗🍲',
+      'Dinner for two, hearts full, plates empty. 🌹✨',
+      'Sweet as honey, warm as bread — this is what love tastes like. 🍯🥖'
+    ],
+    bold:[
+      'This dish is not for the faint of heart. 🔥🌶️',
+      'I didn\'t just cook dinner. I created an experience. 👨‍🍳💥',
+      'My kitchen. My rules. Your tastebuds will thank me. 😤🍳',
+      'Flavours so bold they\'ll wake up your ancestors. 💪🍛',
+      'If you can\'t handle the heat, stay out of my kitchen. 🔥😎'
+    ]
+  },
+  travel:{
+    inspiring:[
+      'The world is a book, and those who do not travel read only one page. 🌍📖',
+      'Not all who wander are lost. Some are finding their way home. ✈️💫',
+      'Collect moments, not things. 🌍✨ #Wanderlust',
+      'Adventure awaits around every corner. Go find it. 🗺️🚀',
+      'Travel is the only thing you buy that makes you richer. 💎✈️'
+    ],
+    funny:[
+      'My passport is my favourite accessory. And it\'s stamped everywhere. 😂📘',
+      'I need six months of vacation, twice a year. 🌴😅',
+      'Travel: the only thing that makes spending money look responsible. 💸✈️',
+      'I\'m on a strict budget. But the plane tickets weren\'t part of it. 😏',
+      'Jet lag: because my body thinks it\'s 3am and my soul thinks it\'s 3pm. 🛩️😴'
+    ],
+    professional:[
+      'Strategic travel: expanding horizons while building global perspective. 🌍📊',
+      'Remote work meets wanderlust. The world is your office. 💼✈️',
+      'Travel broadens the mind and sharpens the instincts. 🧠🌏',
+      'Every destination teaches a lesson. Be a student of the world. 📚🗺️',
+      'Cultural fluency is the new competitive advantage. 🌍💼'
+    ],
+    romantic:[
+      'I would rather travel with you than arrive anywhere alone. 💕✈️',
+      'Paris is always a good idea. But anywhere with you is perfect. ❤️🗼',
+      'Our love story has stamps from every continent. 🌍💗',
+      'Sunsets look better when you\'re holding hands. 🌅💞',
+      'Let\'s get lost together. I promise we\'ll find something beautiful. 💑✨'
+    ],
+    bold:[
+      'I didn\'t book a trip. I booked a transformation. 🔥✈️',
+      'The beaten path is for the beaten. I forge my own. 😤🗺️',
+      'I travel not to escape life, but for life not to escape me. 💥🌍',
+      'Fear is just a souvenir. Collect it and move on. 👊✨',
+      'Bold travellers don\'t wait for the perfect moment — they make it. 💪🌏'
+    ]
+  }
+};
+
+const hashtagsDB={
+  wedding:'#WeddingDay #JustMarried #BrideAndGroom #WeddingInspo #LoveStory #HappilyEverAfter #WeddingVibes #BridalParty #WeddingPhotography #DestinationWedding #WeddingGoals #ForeverYours #TilDeathDoUsPart #WeddingPlanner #WeddingDress #GroomStyle #WeddingReception #WeddingCake #MarriedLife #Newlyweds',
+  fashion:'#OOTD #FashionBlogger #StyleInspo #OutfitOfTheDay #FashionWeek #StreetStyle #LuxuryFashion #Trending #WardrobeEssentials #StyleGoals #Fashionista #Moda #Couture #VintageStyle #MinimalistFashion #Streetwear #FashionEditorial #BeautyAndFashion #Accessories #HandmadeStyle',
+  business:'#Entrepreneur #BusinessOwner #StartupLife #Hustle #SuccessMindset #BossMindset #MarketingTips #SmallBusiness #GrowthHacking #Leadership #CEO #BusinessStrategy #Innovation #Networking #ProductivityHacks #GoalGetter #WealthMindset #SideHustle #FreelancerLife #DigitalBusiness',
+  food:'#Foodie #FoodPhotography #InstaFood #Delicious #HomeCooking #Yummy #Gourmet #FoodBlogger #RecipeOfTheDay #ChefLife #FoodLover #BrunchIdeas #DinnerParty #HealthyEating #ComfortFood #FoodStyling #Tasty #CookingAtHome #BakingLove #FoodArt',
+  travel:'#Wanderlust #TravelGram #Explore #AdventureAwaits #TravelPhotography #WorldExplorer #BucketList #VacationMode #TravelDiaries #PassionPassport #RoadTrip #NatureLover #BeachLife #MountainView #CityBreak #TravelInspo #Backpacker #LuxuryTravel #SoloTravel #RoamThePlanet'
+};
+
+let currentMood='inspiring';
+
+document.querySelectorAll('.mood-btn').forEach(btn=>{
+  btn.addEventListener('click',function(){
+    document.querySelectorAll('.mood-btn').forEach(b=>b.classList.remove('active'));
+    this.classList.add('active');
+    currentMood=this.dataset.mood;
+  });
+});
+
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+
+function generateCaptions(){
+  const niche=document.getElementById('nicheSelect').value;
+  const useEmoji=document.getElementById('emojiToggle').classList.contains('active');
+  
+  if(!captionsDB[niche]||!captionsDB[niche][currentMood]){
+    showToast('⚠️ No captions available for this selection. Try a different mood.');
+    return;
+  }
+
+  const pool=captionsDB[niche][currentMood];
+  // Pick 3 random unique captions (or fewer if pool < 3)
+  const shuffled=[...pool].sort(()=>Math.random()-0.5);
+  const selected=shuffled.slice(0,3);
+
+  const list=document.getElementById('captionList');
+  list.innerHTML='';
+
+  selected.forEach((cap,i)=>{
+    let display=useEmoji?cap:cap.replace(/[😊😂❤️✨💫🌅💕💗💞💍💎🔥👑🎉💪😎💼🏆🌟💫🌍✈️🗺️💑💗🍝🍰🍕🍔🍟🌮🥗🍲🥐🥖🍯🌶️🍛🥂👠👗👔🛍️💅😤🤝💕❤️💗💞✨🌟💫🌅🌍✈️🗺️💑👑🔥🎉💪😎💼🏆]/g,'').trim();
+    
+    const card=document.createElement('div');
+    card.className='caption-card';
+    card.style.animation=`fadeIn 0.4s ease ${i*0.15}s forwards`;
+    card.style.opacity='0';
+    card.innerHTML=`
+      <div class="caption-text">${display||cap}</div>
+      <div class="caption-tags">
+        <span>${document.getElementById('nicheSelect').options[document.getElementById('nicheSelect').selectedIndex].text.split(' ')[1]||niche}</span>
+        <span>${currentMood.charAt(0).toUpperCase()+currentMood.slice(1)}</span>
+        <span>${useEmoji?'With emoji':'No emoji'}</span>
+      </div>
+      <div class="caption-actions">
+        <button onclick="copyCaption(this,'${escapeHtml(display||cap).replace(/'/g,"\\'")}')">📋 Copy</button>
+        <button onclick="copyWithHashtags(this,'${escapeHtml(display||cap).replace(/'/g,"\\'")}','${niche}')">📋 + Hashtags</button>
+      </div>
+    `;
+    list.appendChild(card);
+  });
+
+  document.getElementById('outputCard').style.display='block';
+  document.getElementById('outputCard').scrollIntoView({behavior:'smooth',block:'start'});
+  showToast('✅ 3 captions generated!');
+}
+
+function escapeHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+
+function copyCaption(btn,text){
+  navigator.clipboard.writeText(text).then(()=>{
+    btn.textContent='✅ Copied!';
+    btn.classList.add('copied');
+    setTimeout(()=>{btn.textContent='📋 Copy';btn.classList.remove('copied')},2000);
+  }).catch(()=>showToast('⚠️ Copy failed'));
+}
+
+function copyWithHashtags(btn,text,niche){
+  const tags=hashtagsDB[niche]||'#love #instagood #photooftheday';
+  const full=text+'\n\n'+tags;
+  navigator.clipboard.writeText(full).then(()=>{
+    btn.textContent='✅ Copied!';
+    btn.classList.add('copied');
+    setTimeout(()=>{btn.textContent='📋 + Hashtags';btn.classList.remove('copied')},2000);
+  }).catch(()=>showToast('⚠️ Copy failed'));
+}
+</script>
+</body>
+</html>
