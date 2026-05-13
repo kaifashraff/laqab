@@ -2,831 +2,674 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>LAQAB — Premium Indian Wedding Embroidery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAQAB — Investor Preview | Premium Indian Groomwear Embroidery</title>
+    <meta name="description" content="LAQAB is a premium Indian wedding embroidery and groomwear brand building WhatsApp-first custom sherwani, tuxedo, bandhgala and Indo-western formalwear for India and diaspora markets.">
+    <meta name="theme-color" content="#070604">
+    <meta property="og:title" content="LAQAB — Premium Indian Groomwear Embroidery">
+    <meta property="og:description" content="Investor preview for LAQAB: artisan-backed premium groomwear, WhatsApp-first operations, and luxury embroidery design direction.">
+    <meta property="og:image" content="assets/looks/look-01.jpg">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
         :root {
-            --gold: #C8A45C;
-            --gold-light: #E8D5A3;
-            --gold-dark: #A8883D;
-            --cream: #FAF6EF;
-            --cream-dark: #F0E8D8;
-            --black: #1A1A1A;
-            --black-2: #2A2A2A;
-            --white: #FFFFFF;
-            --text: #3A3A3A;
-            --text-light: #7A7A7A;
+            --ink: #070604;
+            --ink-2: #11100c;
+            --ink-3: #1c1812;
+            --cream: #f6efe3;
+            --cream-2: #fffaf0;
+            --muted: #a89d8a;
+            --text: #2f2a22;
+            --gold: #c9a45b;
+            --gold-2: #f1d591;
+            --line: rgba(201, 164, 91, .26);
+            --white: #ffffff;
+            --green: #0e2e29;
+            --navy: #07172b;
+            --shadow: 0 30px 80px rgba(0,0,0,.28);
+            --radius: 28px;
         }
-        
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
-            font-family: 'Inter', sans-serif;
-            background: var(--cream);
+            margin: 0;
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             color: var(--text);
-            line-height: 1.7;
+            background: var(--cream);
+            line-height: 1.55;
             overflow-x: hidden;
         }
-        
-        h1, h2, h3, h4, .serif {
-            font-family: 'Cormorant Garamond', serif;
-        }
-        
-        /* === NAVBAR === */
-        nav {
+        body::before {
+            content: "";
             position: fixed;
+            inset: 0;
+            pointer-events: none;
+            opacity: .36;
+            background:
+                radial-gradient(circle at 12% 8%, rgba(201,164,91,.17), transparent 25%),
+                radial-gradient(circle at 88% 18%, rgba(14,46,41,.18), transparent 28%),
+                linear-gradient(135deg, rgba(255,255,255,.24), transparent 40%);
+            z-index: -2;
+        }
+        img { max-width: 100%; display: block; }
+        a { color: inherit; }
+        .serif, h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; }
+        .shell { width: min(1180px, calc(100% - 36px)); margin: 0 auto; }
+        .site-header {
+            position: sticky;
             top: 0;
-            width: 100%;
-            padding: 16px 24px;
-            background: rgba(26,26,26,0.95);
-            backdrop-filter: blur(12px);
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            z-index: 50;
+            backdrop-filter: blur(18px);
+            background: rgba(7,6,4,.82);
+            border-bottom: 1px solid rgba(255,255,255,.09);
         }
-        
-        .nav-logo {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 22px;
-            font-weight: 600;
-            letter-spacing: 3px;
-            color: var(--gold);
+        .nav { height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 22px; }
+        .brand { text-decoration: none; display: inline-flex; flex-direction: column; line-height: 1; }
+        .brand strong { color: var(--gold-2); font-family: "Cormorant Garamond", Georgia, serif; font-size: 28px; letter-spacing: .18em; }
+        .brand span { color: rgba(255,255,255,.58); font-size: 10px; letter-spacing: .28em; text-transform: uppercase; margin-top: 5px; }
+        .nav-links { display: flex; align-items: center; gap: 24px; color: rgba(255,255,255,.72); font-size: 13px; }
+        .nav-links a { text-decoration: none; }
+        .nav-links a:hover { color: var(--gold-2); }
+        .btn {
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            padding: 12px 18px;
             text-decoration: none;
-        }
-        .nav-logo span { color: var(--white); }
-        
-        .nav-cta {
-            background: var(--gold);
-            color: var(--black);
-            padding: 8px 18px;
-            border-radius: 25px;
-            font-size: 13px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-        .nav-cta:hover { background: var(--gold-light); transform: scale(1.05); }
-        
-        /* === HERO === */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 120px 24px 60px;
-            background: linear-gradient(135deg, var(--black) 0%, var(--black-2) 50%, #1a1410 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle at 50% 50%, rgba(200,164,92,0.03) 0%, transparent 60%);
-            animation: shimmer 8s ease-in-out infinite;
-        }
-        
-        @keyframes shimmer {
-            0%, 100% { transform: translate(0, 0); }
-            50% { transform: translate(20px, -20px); }
-        }
-        
-        .hero-badge {
-            display: inline-block;
-            padding: 6px 20px;
-            border: 1px solid var(--gold-dark);
-            border-radius: 25px;
-            color: var(--gold-light);
-            font-size: 11px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin-bottom: 30px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .hero h1 {
-            font-size: clamp(42px, 10vw, 80px);
-            color: var(--white);
-            font-weight: 600;
-            letter-spacing: 2px;
-            position: relative;
-            z-index: 1;
-            line-height: 1.1;
-        }
-        
-        .hero h1 .gold { color: var(--gold); }
-        
-        .hero p {
-            font-size: clamp(16px, 3vw, 20px);
-            color: rgba(255,255,255,0.6);
-            max-width: 520px;
-            margin: 20px auto 40px;
-            position: relative;
-            z-index: 1;
-            font-weight: 300;
-        }
-        
-        .hero-cta {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            background: var(--gold);
-            color: var(--black);
-            padding: 16px 36px;
-            border-radius: 50px;
-            font-size: 16px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s;
-            position: relative;
-            z-index: 1;
-        }
-        .hero-cta:hover { background: var(--gold-light); transform: translateY(-2px); }
-        
-        .hero-stats {
-            display: flex;
-            gap: 40px;
-            margin-top: 60px;
-            position: relative;
-            z-index: 1;
-        }
-        .hero-stats div {
-            text-align: center;
-        }
-        .hero-stats .num {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 32px;
-            color: var(--gold);
-            font-weight: 600;
-        }
-        .hero-stats .label {
-            font-size: 11px;
-            color: rgba(255,255,255,0.4);
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-        
-        /* === SECTION COMMON === */
-        section {
-            padding: 80px 24px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        
-        .section-tag {
-            font-size: 11px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: var(--gold);
-            margin-bottom: 12px;
-            font-weight: 500;
-        }
-        
-        .section-title {
-            font-size: clamp(32px, 6vw, 48px);
-            font-weight: 600;
-            color: var(--black);
-            margin-bottom: 16px;
-            line-height: 1.2;
-        }
-        
-        .section-desc {
-            font-size: 16px;
-            color: var(--text-light);
-            max-width: 600px;
-            line-height: 1.8;
-        }
-        
-        /* === STORY === */
-        #story {
-            padding-top: 100px;
-        }
-        .story-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-            margin-top: 40px;
-        }
-        
-        .story-visual {
-            background: var(--cream-dark);
-            border-radius: 16px;
-            padding: 40px;
-            min-height: 300px;
-            display: flex;
-            align-items: center;
             justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .story-visual::before {
-            content: 'LAQAB';
-            position: absolute;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 120px;
+            gap: 9px;
+            min-height: 46px;
             font-weight: 700;
-            color: rgba(200,164,92,0.06);
-            transform: rotate(-15deg);
+            letter-spacing: .01em;
+            transition: transform .2s ease, background .2s ease, border .2s ease;
+            cursor: pointer;
         }
-        .story-visual .emblem {
-            text-align: center;
+        .btn:hover { transform: translateY(-2px); }
+        .btn-primary { background: linear-gradient(135deg, var(--gold-2), var(--gold)); color: #140f07; border-color: transparent; box-shadow: 0 14px 34px rgba(201,164,91,.28); }
+        .btn-dark { background: rgba(7,6,4,.78); color: var(--cream-2); border-color: rgba(255,255,255,.12); }
+        .btn-ghost { color: var(--ink); background: rgba(255,255,255,.48); }
+        .hero {
+            color: var(--cream-2);
+            background:
+                linear-gradient(90deg, rgba(7,6,4,.96) 0%, rgba(7,6,4,.86) 47%, rgba(7,6,4,.42) 100%),
+                radial-gradient(circle at 70% 20%, rgba(201,164,91,.22), transparent 30%),
+                var(--ink);
             position: relative;
-            z-index: 1;
+            overflow: hidden;
         }
-        .story-visual .emblem h3 {
-            font-size: 28px;
-            color: var(--gold-dark);
-            font-weight: 600;
-        }
-        .story-visual .emblem p {
-            font-size: 14px;
-            color: var(--text-light);
-            max-width: 280px;
-            margin-top: 10px;
-        }
-        
-        .story-text h3 {
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--black);
-            margin-bottom: 16px;
-        }
-        .story-text p {
-            color: var(--text-light);
-            margin-bottom: 16px;
-            font-size: 15px;
-            line-height: 1.9;
-        }
-        .story-text .acronym {
-            background: var(--cream-dark);
-            padding: 20px;
-            border-radius: 12px;
-            margin-top: 20px;
-        }
-        .story-text .acronym strong {
-            display: block;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 20px;
-            color: var(--gold-dark);
-            margin-bottom: 8px;
-        }
-        .story-text .acronym span {
-            font-size: 14px;
-            color: var(--text-light);
-        }
-        
-        /* === PRODUCTS === */
-        #products {
-            background: var(--white);
-            border-radius: 24px 24px 0 0;
-            max-width: 100%;
-            padding: 100px 24px;
-        }
-        #products .inner {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-            margin-top: 40px;
-        }
-        
-        .product-card {
-            background: var(--cream);
-            border-radius: 16px;
-            padding: 32px;
-            transition: all 0.3s;
-            border: 1px solid transparent;
-        }
-        .product-card:hover {
-            border-color: var(--gold-light);
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.06);
-        }
-        .product-card .icon {
-            width: 48px;
-            height: 48px;
-            background: var(--gold);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            margin-bottom: 16px;
-        }
-        .product-card h3 {
-            font-size: 20px;
-            font-weight: 600;
-            color: var(--black);
-            margin-bottom: 8px;
-        }
-        .product-card .price {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 22px;
-            color: var(--gold-dark);
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-        .product-card p {
-            font-size: 14px;
-            color: var(--text-light);
-            line-height: 1.7;
-        }
-        
-        /* === PROCESS === */
-        #process {
-            background: var(--black);
-            color: var(--white);
-            max-width: 100%;
-            padding: 100px 24px;
-        }
-        #process .inner {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        #process .section-title { color: var(--white); }
-        #process .section-desc { color: rgba(255,255,255,0.5); }
-        
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-            counter-reset: step;
-        }
-        
-        .step {
-            text-align: center;
-            counter-increment: step;
-        }
-        .step::before {
-            content: '0' counter(step);
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 42px;
-            color: var(--gold-dark);
-            font-weight: 600;
-            display: block;
-            margin-bottom: 12px;
-            opacity: 0.4;
-        }
-        .step h4 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 20px;
-            color: var(--gold);
-            margin-bottom: 8px;
-        }
-        .step p {
-            font-size: 14px;
-            color: rgba(255,255,255,0.5);
-            line-height: 1.6;
-        }
-        
-        /* === WHY LAQAB === */
-        .why-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 24px;
-            margin-top: 40px;
-        }
-        
-        .why-card {
-            background: var(--cream-dark);
-            border-radius: 16px;
-            padding: 28px;
-            text-align: center;
-        }
-        .why-card .num { 
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 36px;
-            color: var(--gold);
-            font-weight: 600;
-        }
-        .why-card h4 {
-            font-size: 18px;
-            color: var(--black);
-            margin: 10px 0 8px;
-            font-weight: 600;
-        }
-        .why-card p {
-            font-size: 14px;
-            color: var(--text-light);
-        }
-        
-        /* === TESTIMONIALS === */
-        #testimonials {
-            background: var(--cream-dark);
-            border-radius: 24px;
-            max-width: 100%;
-            padding: 80px 24px;
-            margin: 0;
-        }
-        #testimonials .inner {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
-            margin-top: 40px;
-        }
-        .testimonial {
-            background: var(--white);
-            border-radius: 16px;
-            padding: 28px;
-            border-left: 3px solid var(--gold);
-        }
-        .testimonial .quote {
-            font-style: italic;
-            color: var(--text);
-            font-size: 15px;
-            line-height: 1.8;
-            margin-bottom: 16px;
-        }
-        .testimonial .author {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--black);
-        }
-        .testimonial .role {
-            font-size: 12px;
-            color: var(--text-light);
-        }
-        
-        /* === CONTACT === */
-        #contact {
-            text-align: center;
-            padding: 100px 24px;
-            background: linear-gradient(135deg, var(--black) 0%, var(--black-2) 100%);
-            color: var(--white);
-            max-width: 100%;
-            margin: 0;
-        }
-        #contact .inner {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        #contact .section-title { color: var(--white); }
-        #contact .section-desc { color: rgba(255,255,255,0.5); }
-        
-        .contact-actions {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            margin-top: 40px;
-            align-items: center;
-        }
-        
-        .wa-btn {
+        .hero .shell { min-height: calc(100vh - 72px); display: grid; grid-template-columns: .95fr 1.05fr; gap: 54px; align-items: center; padding: 64px 0 72px; }
+        .eyebrow {
             display: inline-flex;
             align-items: center;
-            justify-content: center;
-            gap: 12px;
-            background: #25D366;
-            color: var(--white);
-            padding: 18px 40px;
-            border-radius: 50px;
-            font-size: 16px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s;
-            width: 100%;
-            max-width: 400px;
-        }
-        .wa-btn:hover { background: #20BD5A; transform: translateY(-2px); }
-        
-        .phone-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
             gap: 10px;
-            color: var(--gold);
-            font-size: 18px;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .phone-btn:hover { color: var(--gold-light); }
-        
-        .contact-info {
-            margin-top: 40px;
-            display: flex;
-            gap: 40px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .contact-info div {
-            text-align: center;
-        }
-        .contact-info .label {
+            color: var(--gold-2);
+            border: 1px solid rgba(241,213,145,.24);
+            background: rgba(241,213,145,.08);
+            padding: 8px 12px;
+            border-radius: 999px;
             font-size: 11px;
-            letter-spacing: 2px;
+            letter-spacing: .22em;
             text-transform: uppercase;
-            color: rgba(255,255,255,0.3);
-            margin-bottom: 4px;
+            font-weight: 700;
         }
-        .contact-info .value {
-            font-size: 15px;
-            color: var(--gold-light);
+        .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold-2); box-shadow: 0 0 18px var(--gold-2); }
+        .hero h1 { font-size: clamp(48px, 7vw, 98px); line-height: .92; margin: 24px 0 20px; letter-spacing: -.04em; max-width: 760px; }
+        .hero h1 em { color: var(--gold-2); font-style: normal; }
+        .hero-lede { font-size: clamp(16px, 2vw, 20px); color: rgba(255,250,240,.72); max-width: 640px; margin: 0 0 30px; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 26px 0 32px; }
+        .hero-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; max-width: 720px; }
+        .metric { border: 1px solid rgba(255,255,255,.09); background: rgba(255,255,255,.045); border-radius: 20px; padding: 17px; }
+        .metric strong { display: block; color: var(--gold-2); font-family: "Cormorant Garamond"; font-size: 31px; line-height: 1; }
+        .metric span { display: block; color: rgba(255,255,255,.54); font-size: 12px; margin-top: 8px; }
+        .hero-art { position: relative; min-height: 660px; }
+        .main-look {
+            position: absolute;
+            right: 8%;
+            top: 2%;
+            width: min(420px, 72vw);
+            border-radius: 34px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(241,213,145,.22);
+            background: #111;
         }
-        
-        /* === FOOTER === */
-        footer {
-            background: var(--black);
-            padding: 40px 24px;
-            text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.05);
+        .main-look img { width: 100%; height: 650px; object-fit: cover; object-position: center top; }
+        .mini-look { position: absolute; width: 190px; border-radius: 24px; overflow: hidden; border: 1px solid rgba(255,255,255,.16); box-shadow: 0 20px 60px rgba(0,0,0,.4); background: #111; }
+        .mini-look img { height: 280px; width: 100%; object-fit: cover; object-position: center top; }
+        .mini-one { left: 0; bottom: 62px; transform: rotate(-5deg); }
+        .mini-two { right: 0; bottom: 8px; transform: rotate(4deg); }
+        .caption-ribbon {
+            position: absolute;
+            left: 10%;
+            top: 34px;
+            z-index: 3;
+            color: #1a1308;
+            background: linear-gradient(135deg, var(--gold-2), var(--gold));
+            padding: 14px 17px;
+            border-radius: 18px;
+            box-shadow: 0 20px 45px rgba(0,0,0,.3);
+            max-width: 250px;
+            font-size: 13px;
+            font-weight: 700;
         }
-        footer .logo {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 24px;
-            color: var(--gold);
-            font-weight: 600;
-            letter-spacing: 3px;
+        .caption-ribbon span { display: block; font-size: 10px; letter-spacing: .18em; text-transform: uppercase; opacity: .72; margin-bottom: 4px; }
+        section { padding: 92px 0; }
+        .section-head { display: flex; align-items: end; justify-content: space-between; gap: 34px; margin-bottom: 42px; }
+        .section-head h2 { margin: 12px 0 0; font-size: clamp(38px, 5vw, 66px); line-height: .96; letter-spacing: -.03em; color: var(--ink); }
+        .section-head p { color: #6c6254; max-width: 520px; margin: 0; }
+        .dark-band { background: var(--ink); color: var(--cream-2); }
+        .dark-band .section-head h2, .dark-band h3 { color: var(--cream-2); }
+        .dark-band .section-head p, .dark-band p { color: rgba(255,250,240,.62); }
+        .proof-grid { display: grid; grid-template-columns: 1.12fr .88fr; gap: 24px; }
+        .proof-card { background: rgba(255,255,255,.64); border: 1px solid rgba(7,6,4,.08); border-radius: var(--radius); padding: 28px; box-shadow: 0 20px 70px rgba(73,51,16,.07); }
+        .proof-card.dark { background: linear-gradient(150deg, var(--ink), #17130f); color: var(--cream-2); border-color: rgba(201,164,91,.18); }
+        .proof-card h3 { font-size: 31px; line-height: 1; margin: 0 0 12px; color: inherit; }
+        .proof-card p { color: #706656; margin: 0; }
+        .proof-card.dark p { color: rgba(255,250,240,.65); }
+        .pill-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+        .pill { font-size: 12px; font-weight: 700; border: 1px solid var(--line); color: #6a4b14; background: rgba(201,164,91,.12); padding: 9px 12px; border-radius: 999px; }
+        .proof-list { list-style: none; padding: 0; margin: 22px 0 0; display: grid; gap: 13px; }
+        .proof-list li { display: flex; gap: 12px; align-items: flex-start; color: rgba(255,250,240,.72); }
+        .proof-list li::before { content: "✦"; color: var(--gold-2); }
+        .looks-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+        .look-card { background: rgba(255,255,255,.68); border: 1px solid rgba(7,6,4,.08); border-radius: 24px; overflow: hidden; box-shadow: 0 18px 60px rgba(40,28,8,.07); }
+        .look-image { width: 100%; border: 0; padding: 0; background: #111; cursor: zoom-in; display: block; }
+        .look-card img { width: 100%; height: 360px; object-fit: cover; object-position: center top; transition: transform .45s ease; }
+        .look-card:hover img { transform: scale(1.035); }
+        .look-copy { padding: 17px; }
+        .look-copy span { color: var(--gold); font-size: 10px; text-transform: uppercase; letter-spacing: .18em; font-weight: 800; }
+        .look-copy h3 { font-size: 23px; margin: 7px 0 5px; line-height: 1; color: var(--ink); }
+        .look-copy p { margin: 0; color: #716858; font-size: 13px; }
+        .model-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+        .model-card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); border-radius: 26px; padding: 26px; }
+        .model-card span { color: var(--gold-2); font-size: 12px; text-transform: uppercase; letter-spacing: .18em; font-weight: 800; }
+        .model-card h3 { font-size: 30px; margin: 12px 0 12px; }
+        .model-card p { margin: 0; }
+        .economics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 26px; }
+        .econ { border: 1px solid rgba(201,164,91,.18); background: rgba(201,164,91,.08); border-radius: 22px; padding: 22px; }
+        .econ strong { color: var(--gold-2); font-family: "Cormorant Garamond"; display: block; font-size: 32px; line-height: 1; }
+        .econ span { color: rgba(255,250,240,.58); font-size: 12px; display: block; margin-top: 8px; }
+        .process { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; }
+        .step { background: rgba(7,6,4,.06); border: 1px solid rgba(7,6,4,.08); border-radius: 22px; padding: 20px; }
+        .step b { display: block; color: var(--gold); font-size: 12px; letter-spacing: .18em; margin-bottom: 12px; }
+        .step h3 { font-size: 25px; margin: 0 0 9px; line-height: 1; color: var(--ink); }
+        .step p { font-size: 13px; color: #6f6557; margin: 0; }
+        .investor-panel { background: linear-gradient(135deg, #fff8ea, #efe1c6); border: 1px solid rgba(201,164,91,.28); border-radius: 34px; overflow: hidden; display: grid; grid-template-columns: 1fr .9fr; box-shadow: 0 25px 90px rgba(74,51,11,.12); }
+        .investor-copy { padding: 44px; }
+        .investor-copy h2 { font-size: clamp(40px, 5vw, 68px); line-height: .95; margin: 10px 0 18px; }
+        .fund-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 24px; }
+        .fund { background: rgba(255,255,255,.56); border: 1px solid rgba(7,6,4,.08); padding: 18px; border-radius: 20px; }
+        .fund strong { display: block; color: var(--ink); }
+        .fund span { color: #756b5c; font-size: 13px; }
+        .investor-image { min-height: 100%; background: #111; }
+        .investor-image img { height: 100%; width: 100%; object-fit: cover; object-position: center top; }
+        .roadmap { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+        .road { border-left: 1px solid var(--line); padding: 4px 0 4px 22px; }
+        .road span { color: var(--gold); font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+        .road h3 { font-size: 28px; margin: 9px 0; }
+        .road p { color: #716858; margin: 0; font-size: 14px; }
+        .contact { background: var(--ink); color: var(--cream-2); padding: 86px 0; }
+        .contact-card { display: grid; grid-template-columns: 1fr auto; gap: 26px; align-items: center; border: 1px solid rgba(255,255,255,.12); background: linear-gradient(135deg, rgba(255,255,255,.08), rgba(201,164,91,.08)); border-radius: 34px; padding: 38px; }
+        .contact h2 { font-size: clamp(42px, 5vw, 70px); margin: 0 0 12px; line-height: .95; }
+        .contact p { color: rgba(255,250,240,.62); max-width: 650px; margin: 0; }
+        .footer { background: #050403; color: rgba(255,255,255,.42); padding: 26px 0; font-size: 12px; }
+        .footer .shell { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+        .modal { position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,.86); display: none; align-items: center; justify-content: center; padding: 22px; }
+        .modal.open { display: flex; }
+        .modal figure { margin: 0; width: min(760px, 100%); }
+        .modal img { max-height: 82vh; width: auto; max-width: 100%; margin: 0 auto; border-radius: 18px; box-shadow: var(--shadow); }
+        .modal figcaption { color: var(--cream-2); text-align: center; margin-top: 14px; font-weight: 700; }
+        .modal button { position: absolute; top: 18px; right: 18px; border: 1px solid rgba(255,255,255,.22); background: rgba(255,255,255,.08); color: white; border-radius: 999px; width: 46px; height: 46px; font-size: 24px; cursor: pointer; }
+        @media (max-width: 980px) {
+            .nav-links a:not(.btn) { display: none; }
+            .hero .shell { grid-template-columns: 1fr; min-height: auto; padding: 48px 0 70px; }
+            .hero-art { min-height: 560px; }
+            .main-look { right: 50%; transform: translateX(50%); }
+            .mini-one { left: 2%; }
+            .mini-two { right: 2%; }
+            .proof-grid, .investor-panel { grid-template-columns: 1fr; }
+            .looks-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .model-grid, .economics, .process, .roadmap { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .contact-card { grid-template-columns: 1fr; }
         }
-        footer p {
-            color: rgba(255,255,255,0.3);
-            font-size: 12px;
-            margin-top: 12px;
+        @media (max-width: 620px) {
+            .shell { width: min(100% - 24px, 1180px); }
+            .nav { height: 66px; }
+            .brand strong { font-size: 22px; }
+            .nav .btn { padding: 10px 12px; font-size: 12px; }
+            .hero-metrics, .model-grid, .economics, .process, .roadmap, .fund-grid { grid-template-columns: 1fr; }
+            .hero-art { min-height: 505px; }
+            .main-look { width: 78%; top: 0; }
+            .main-look img { height: 480px; }
+            .mini-look { width: 128px; }
+            .mini-look img { height: 190px; }
+            .caption-ribbon { left: 0; top: auto; bottom: 6px; max-width: 210px; }
+            section { padding: 66px 0; }
+            .section-head { display: block; }
+            .looks-grid { grid-template-columns: 1fr; }
+            .look-card img { height: 430px; }
+            .investor-copy, .contact-card { padding: 26px; }
+            .footer .shell { display: block; }
         }
-        
-        /* === RESPONSIVE === */
-        @media (max-width: 768px) {
-            nav { padding: 12px 16px; }
-            .hero { padding: 100px 16px 40px; }
-            section { padding: 60px 16px; }
-            .story-grid { grid-template-columns: 1fr; gap: 30px; }
-            .story-visual { min-height: 200px; padding: 24px; }
-            .product-grid { grid-template-columns: 1fr; }
-            .hero-stats { gap: 24px; flex-wrap: wrap; justify-content: center; }
-            #products, #process, #testimonials, #contact { padding: 60px 16px; }
-            .contact-info { gap: 24px; }
+        @media (prefers-reduced-motion: reduce) {
+            * { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
         }
     </style>
 </head>
 <body>
-    <!-- NAVBAR -->
-    <nav>
-        <a href="#" class="nav-logo">LA<span>Q</span>AB</a>
-        <a href="https://wa.me/919987314177?text=Namaste!%20Main%20LAQAB%20se%20wedding%20embroidery%20ke%20baare%20mein%20pochhna%20chahta%20hoon." class="nav-cta" target="_blank">WhatsApp 📩</a>
-    </nav>
-
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-badge">Est. 2026 · Lucknow, India</div>
-        <h1>Wedding Embroidery<br><span class="gold">Worth a Thousand Words</span></h1>
-        <p>Premium zari embroidery, handcrafted by master artisans. Delivered to your doorstep anywhere in the world.</p>
-        <a href="https://wa.me/919987314177?text=Namaste!%20Main%20LAQAB%20se%20wedding%20embroidery%20ke%20baare%20mein%20pochhna%20chahta%20hoon." class="hero-cta" target="_blank">
-            ✦ Start Your Order on WhatsApp
-        </a>
-        <div class="hero-stats">
-            <div><div class="num">100+</div><div class="label">Master Artisans</div></div>
-            <div><div class="num">2 Weeks</div><div class="label">Avg. Turnaround</div></div>
-            <div><div class="num">$500–40K</div><div class="label">Price Range</div></div>
+    <header class="site-header">
+        <div class="shell nav">
+            <a class="brand" href="#top" aria-label="LAQAB home"><strong>LAQAB</strong><span>Investable Craft</span></a>
+            <nav class="nav-links" aria-label="Primary navigation">
+                <a href="#proof">Proof</a>
+                <a href="#looks">Designs</a>
+                <a href="#model">Business</a>
+                <a href="#investor">Investor</a>
+                <a class="btn btn-primary" href="https://wa.me/919987314177?text=I%20want%20to%20discuss%20LAQAB%20investment%20%2F%20partnership" target="_blank" rel="noopener">WhatsApp Kaif</a>
+            </nav>
         </div>
-    </section>
+    </header>
 
-    <!-- STORY -->
-    <section id="story">
-        <div class="section-tag">Our Story</div>
-        <h2 class="section-title">Craft That Travels<br>Generations</h2>
-        <div class="story-grid">
-            <div class="story-text">
-                <h3>From the Karigar's Hands to Your Wedding</h3>
-                <p>
-                    LAQAB was born from a simple realisation — the finest embroidery in the world 
-                    is made in small workshops across Lucknow, but the people who value it most 
-                    (NRIs, global Indians) can't access it without flying back or settling for 
-                    mass-produced alternatives.
-                </p>
-                <p>
-                    We bridge that gap. A network of 100–300 master karigar, coordinated through 
-                    AI, delivering premium custom embroidery anywhere in the world — with the 
-                    same love and precision that would take a month of back-and-forth in a 
-                    physical workshop.
-                </p>
-                <div class="acronym">
-                    <strong>LAQAB</strong>
-                    <span><b>L</b>ucknow — <b>A</b>rtisans — <b>Q</b>uality — <b>zA</b>ri — <b>B</b>outique</span>
-                </div>
-            </div>
-            <div class="story-visual">
-                <div class="emblem">
-                    <h3>✦ LAQAB ✦</h3>
-                    <p>Premium Indian Wedding Embroidery — Handcrafted with Heritage</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PRODUCTS -->
-    <section id="products">
-        <div class="inner">
-            <div class="section-tag">Our Collection</div>
-            <h2 class="section-title">Embroidered to Perfection</h2>
-            <p class="section-desc">Each piece is handcrafted by master karigar using traditional zari, gota, and chikankari techniques. Custom orders welcome.</p>
-            
-            <div class="product-grid">
-                <div class="product-card">
-                    <div class="icon">👔</div>
-                    <h3>Premium Sherwani</h3>
-                    <div class="price">$500 – $5,000</div>
-                    <p>Heavy embroidered sherwanis with gold/silver zari work. Custom sizing, multiple embroidery styles available. Perfect for the groom.</p>
-                </div>
-                <div class="product-card">
-                    <div class="icon">🤵</div>
-                    <h3>Wedding Suits</h3>
-                    <div class="price">$800 – $3,000</div>
-                    <p>Indo-western suits with hand-embroidered collars, cuffs, and lapels. Fusion of traditional craft with modern silhouettes.</p>
-                </div>
-                <div class="product-card">
-                    <div class="icon">🧥</div>
-                    <h3>Indo-Western Jackets</h3>
-                    <div class="price">$600 – $2,500</div>
-                    <p>Statement jackets with intricate embroidery — perfect for the wedding reception or mehendi function.</p>
-                </div>
-                <div class="product-card">
-                    <div class="icon">🧣</div>
-                    <h3>Accessories</h3>
-                    <div class="price">$50 – $500</div>
-                    <p>Pagri (turban), dupatta borders, safa, embroidered pocket squares, and cufflinks to complete the look.</p>
-                </div>
-                <div class="product-card">
-                    <div class="icon">🪡</div>
-                    <h3>Custom Embroidery</h3>
-                    <div class="price">Custom Quote</div>
-                    <p>Bring your own design. Our karigar can reproduce any pattern — monograms, family crests, custom motifs. Anything is possible.</p>
-                </div>
-                <div class="product-card">
-                    <div class="icon">👗</div>
-                    <h3>Women's Wear</h3>
-                    <div class="price">$400 – $3,000</div>
-                    <p>Embroidered lehenga blouses, dupattas, and bridal accessories. Launching soon — join the waitlist on WhatsApp.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROCESS -->
-    <section id="process">
-        <div class="inner">
-            <div class="section-tag">How It Works</div>
-            <h2 class="section-title">From Chat to Chest</h2>
-            <p class="section-desc">No store visits. No middlemen. Just you, us, and master artisans — connected through WhatsApp.</p>
-            
-            <div class="process-steps">
-                <div class="step">
-                    <h4>You Reach Out</h4>
-                    <p>Message us on WhatsApp. Tell us the event, your budget, and style preferences.</p>
-                </div>
-                <div class="step">
-                    <h4>We Share Catalog</h4>
-                    <p>We send design options, fabric swatches, and past work photos within minutes.</p>
-                </div>
-                <div class="step">
-                    <h4>Custom Consultation</h4>
-                    <p>For premium orders ($1,500+), we do a video consultation to capture every detail.</p>
-                </div>
-                <div class="step">
-                    <h4>Artisans Craft It</h4>
-                    <p>Your piece is handcrafted by master karigar. We send WIP photos every few days.</p>
-                </div>
-                <div class="step">
-                    <h4>Delivered to You</h4>
-                    <p>Shipped to your doorstep — anywhere in the world. Quality checked before dispatch.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- WHY LAQAB -->
-    <section id="why">
-        <div class="section-tag">Why LAQAB</div>
-        <h2 class="section-title">The LAQAB Difference</h2>
-        <div class="why-grid">
-            <div class="why-card">
-                <div class="num">100–300</div>
-                <h4>Master Artisans</h4>
-                <p>Direct access to Lucknow's finest karigar — no middleman markups.</p>
-            </div>
-            <div class="why-card">
-                <div class="num">60%+</div>
-                <h4>Cost Savings</h4>
-                <p>Compare to retail showroom pricing. You pay for the craft, not the rent.</p>
-            </div>
-            <div class="why-card">
-                <div class="num">2 Weeks</div>
-                <h4>Avg. Turnaround</h4>
-                <p>From first message to your doorstep — faster than most local tailors.</p>
-            </div>
-            <div class="why-card">
-                <div class="num">📱</div>
-                <h4>100% WhatsApp</h4>
-                <p>No store visits. No appointments. Everything happens on your phone.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section id="testimonials">
-        <div class="inner">
-            <div class="section-tag">What Our Clients Say</div>
-            <h2 class="section-title">Trusted by Brides & Grooms Worldwide</h2>
-            
-            <div class="testimonial-grid">
-                <div class="testimonial">
-                    <div class="quote">"The sherwani was absolutely stunning. Every single guest asked where I got it made. The embroidery detail was beyond what I imagined."</div>
-                    <div class="author">— Rahul S.</div>
-                    <div class="role">Wedding, Dubai | May 2026</div>
-                </div>
-                <div class="testimonial">
-                    <div class="quote">"I was sceptical about ordering wedding clothes on WhatsApp, but LAQAB sent regular updates and the final product exceeded my expectations. Will order again for my brother's wedding."</div>
-                    <div class="author">— Arjun M.</div>
-                    <div class="role">Engagement, London | April 2026</div>
-                </div>
-                <div class="testimonial">
-                    <div class="quote">"The custom embroidery for my reception jacket was exactly what I wanted. They replicated my family crest perfectly. Unbelievable quality for the price."</div>
-                    <div class="author">— Vikram K.</div>
-                    <div class="role">Wedding, Ahmedabad | March 2026</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-        <div class="inner">
-            <div class="section-tag">Get Started</div>
-            <h2 class="section-title">Your Wedding,<br>One Message Away</h2>
-            <p class="section-desc">Drop us a message on WhatsApp and we'll take it from there. No forms, no fuss — just great craft.</p>
-            
-            <div class="contact-actions">
-                <a href="https://wa.me/919987314177?text=Namaste!%20Main%20LAQAB%20se%20wedding%20embroidery%20ke%20baare%20mein%20pochhna%20chahta%20hoon.%20Mujhe%20[kal/date]%20ke%20liye%20[product]%20chahiye%20tha%20-%20mera%20budget%20approximately%20[amount]%20hai." class="wa-btn" target="_blank">
-                    ✦ Chat on WhatsApp — Free Consultation
-                </a>
-                <a href="tel:+919987314177" class="phone-btn">📞 +91 99873 14177</a>
-            </div>
-            
-            <div class="contact-info">
+    <main id="top">
+        <section class="hero" aria-label="LAQAB investor preview hero">
+            <div class="shell">
                 <div>
-                    <div class="label">Location</div>
-                    <div class="value">Lucknow, India</div>
+                    <span class="eyebrow"><i class="dot"></i> Investor Preview • Premium Groomwear</span>
+                    <h1>Indian embroidery, rebuilt for the <em>global groom.</em></h1>
+                    <p class="hero-lede">LAQAB is a WhatsApp-first premium groomwear and embroidery brand connecting Indian artisan clusters with high-intent wedding buyers across India, UAE and diaspora markets.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#investor">View investor case</a>
+                        <a class="btn btn-dark" href="#looks">See design direction</a>
+                    </div>
+                    <div class="hero-metrics" aria-label="LAQAB key operating targets">
+                        <div class="metric"><strong>100–300</strong><span>artisan cluster access</span></div>
+                        <div class="metric"><strong>$1.8k+</strong><span>target premium AOV</span></div>
+                        <div class="metric"><strong>57–65%</strong><span>target gross margin</span></div>
+                    </div>
                 </div>
-                <div>
-                    <div class="label">Turnaround</div>
-                    <div class="value">7–14 Days</div>
-                </div>
-                <div>
-                    <div class="label">Shipping</div>
-                    <div class="value">Worldwide ✈️</div>
-                </div>
-                <div>
-                    <div class="label">Payment</div>
-                    <div class="value">Razorpay / Stripe</div>
+                <div class="hero-art" aria-hidden="true">
+                    <div class="caption-ribbon"><span>Direction</span>Dark groomwear, botanical handwork, subtle status.</div>
+                    <div class="main-look"><img src="assets/looks/look-01.jpg" alt="Midnight blue embroidered LAQAB groomwear direction"></div>
+                    <div class="mini-look mini-one"><img src="assets/looks/look-02.jpg" alt="Black tonal embroidered bandhgala direction"></div>
+                    <div class="mini-look mini-two"><img src="assets/looks/look-04.jpg" alt="Black gold embroidered tuxedo direction"></div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="logo">LA<span style="color:#C8A45C;">Q</span>AB</div>
-        <p>Premium Indian Wedding Embroidery — Handcrafted by Master Artisans</p>
-        <p style="margin-top:8px;">© 2026 LAQAB. Lucknow · Ahmedabad · Dubai</p>
+        <section id="proof">
+            <div class="shell">
+                <div class="section-head">
+                    <div>
+                        <span class="eyebrow"><i class="dot"></i> Why LAQAB</span>
+                        <h2>A premium brand on top of real production capacity.</h2>
+                    </div>
+                    <p>Most embroidery sellers are local, fragmented and offline. LAQAB packages the same craft into an investor-grade brand: curated design, WhatsApp conversion, artisan coordination and repeatable fulfillment.</p>
+                </div>
+                <div class="proof-grid">
+                    <article class="proof-card dark">
+                        <h3>The opportunity</h3>
+                        <p>Indian weddings are visual, emotional and status-driven. Groomwear is under-branded compared to bridalwear. LAQAB focuses on the groom and family ceremony market where customization, trust and speed matter.</p>
+                        <ul class="proof-list">
+                            <li>Premium sherwanis, bandhgala jackets, tuxedos and Indo-western sets.</li>
+                            <li>India-first production with diaspora-facing sales.</li>
+                            <li>WhatsApp as the storefront, CRM and consultation layer.</li>
+                        </ul>
+                    </article>
+                    <article class="proof-card">
+                        <h3>What exists already</h3>
+                        <p>LAQAB starts with access to a karigar cluster, tailoring/embroidery know-how and a focused visual direction — not a generic fashion idea.</p>
+                        <div class="pill-row">
+                            <span class="pill">Zari</span>
+                            <span class="pill">Aari</span>
+                            <span class="pill">Beadwork</span>
+                            <span class="pill">Sequins</span>
+                            <span class="pill">Sherwani</span>
+                            <span class="pill">Tuxedo</span>
+                            <span class="pill">Bandhgala</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="looks" class="dark-band">
+            <div class="shell">
+                <div class="section-head">
+                    <div>
+                        <span class="eyebrow"><i class="dot"></i> Visual Direction</span>
+                        <h2>The reference board investors can feel instantly.</h2>
+                    </div>
+                    <p>These images define LAQAB's design lane: black, ivory, navy and emerald bases with dense floral embroidery, crystal highlights and ceremony-ready silhouettes.</p>
+                </div>
+                <div class="looks-grid">
+                <article class="look-card" data-look="1">
+                    <button class="look-image" aria-label="Open Midnight Blue Ceremony Jacket" data-full="assets/looks/look-01.jpg" data-title="Midnight Blue Ceremony Jacket">
+                        <img src="assets/looks/look-01.jpg" alt="Midnight Blue Ceremony Jacket — Navy base, silver floral spray, mandarin collar" loading="lazy">
+                    </button>
+                    <div class="look-copy">
+                        <span>Hero Direction</span>
+                        <h3>Midnight Blue Ceremony Jacket</h3>
+                        <p>Navy base, silver floral spray, mandarin collar</p>
+                    </div>
+                </article>
+                <article class="look-card" data-look="2">
+                    <button class="look-image" aria-label="Open Stealth Black Bandhgala" data-full="assets/looks/look-02.jpg" data-title="Stealth Black Bandhgala">
+                        <img src="assets/looks/look-02.jpg" alt="Stealth Black Bandhgala — Black-on-black beadwork for reception wear" loading="lazy">
+                    </button>
+                    <div class="look-copy">
+                        <span>Investor Board</span>
+                        <h3>Stealth Black Bandhgala</h3>
+                        <p>Black-on-black beadwork for reception wear</p>
+                    </div>
+                </article>
+                <article class="look-card" data-look="3">
+                    <button class="look-image" aria-label="Open Noir Gold Heritage Bandhgala" data-full="assets/looks/look-03.jpg" data-title="Noir Gold Heritage Bandhgala">
+                        <img src="assets/looks/look-03.jpg" alt="Noir Gold Heritage Bandhgala — Dense gold zari over black ceremonial tailoring" loading="lazy">
+                    </button>
+                    <div class="look-copy">
+                        <span>Investor Board</span>
+                        <h3>Noir Gold Heritage Bandhgala</h3>
+                        <p>Dense gold zari over black ceremonial tailoring</p>
+                    </div>
+                </article>
+                <article class="look-card" data-look="4">
+                    <button class="look-image" aria-label="Open Gold Vine Tuxedo" data-full="assets/looks/look-04.jpg" data-title="Gold Vine Tuxedo">
+                        <img src="assets/looks/look-04.jpg" alt="Gold Vine Tuxedo — Black velvet tuxedo with gold botanical embroidery" loading="lazy">
+                    </button>
+                    <div class="look-copy">
+                        <span>Investor Board</span>
+                        <h3>Gold Vine Tuxedo</h3>
+                        <p>Black velvet tuxedo with gold botanical embroidery</p>
+                    </div>
+                </article>
+                <article class="look-card" data-look="5">
+                    <button class="look-image" aria-label="Open Studio Gold Bandhgala" data-full="assets/looks/look-05.jpg" data-title="Studio Gold Bandhgala">
+                        <img src="assets/looks/look-05.jpg" alt="Studio Gold Bandhgala — Structured black jacket with shoulder zari work" loading="lazy">
+                    </button>
+                    <div class="look-copy">
+                        <span>Investor Board</span>
+                        <h3>Studio Gold Bandhgala</h3>
+                        <p>Structured black jacket with shoulder zari work</p>
+                    </div>
+                </article>
+                <article class="look-card" data-look="6">
+                    <button class="look-image" aria-label="Open Full Gold Crest Tuxedo" data-full="assets/looks/look-06.jpg" data-title="Full Gold Crest Tuxedo">
+                        <img src="assets/looks/look-06.jpg" alt="Full Gold Crest Tuxedo — High-contrast gold embroidery across lapels" loading="lazy">
+                    </button>
+                    <div class="look-copy">
+                        <span>Investor Board</span>
+                        <h3>Full Gold Crest Tuxedo</h3>
+                        <p>High-contrast gold embroidery across lapels</p>
+                    </div>
+                </article>
+                <article class="look-card" data-look="7">
+                    <button class="look-image" aria-label="Open Silver Vine Dinner Jacket" data-full="assets/looks/look-07.jpg" data-title="Silver Vine Dinner Jacket">
+                        <img src="assets/looks/look-07.jpg" alt="Silver Vine Dinner Jacket — Black suiting with silver thread and cuff work" loading="lazy">
+                    </button>
+                    <div class="look-copy">
+                        <span>Investor Board</span>
+                        <h3>Silver Vine Dinner Jacket</h3>
+                        <p>Black suiting with silver thread and cuff work</p>
+                    </div>
+                </article>
+                <article class="look-card" data-look="8">
+                    <button class="look-image" aria-label="Open Runway Floral Tuxedo" data-full="assets/looks/look-08.jpg" data-title="Runway Floral Tuxedo">
+                        <img src="assets/looks/look-08.jpg" alt="Runway Floral Tuxedo — Black formalwear with ornate lapel embroidery" loading="lazy">
+                    </button>
+                    <div class="look-copy">
+                        <span>Investor Board</span>
+                        <h3>Runway Floral Tuxedo</h3>
+                        <p>Black formalwear with ornate lapel embroidery</p>
+                    </div>
+                </article>
+                <article class="look-card" data-look="9">
+                    <button class="look-image" aria-label="Open Tonal Black Detail" data-full="assets/looks/look-09.jpg" data-title="Tonal Black Detail">
+                        <img src="assets/looks/look-09.jpg" alt="Tonal Black Detail — Close-up of black bead and sequin handwork" loading="lazy">
+                    </button>
+                    <div class="look-copy">
+                        <span>Design Reference</span>
+                        <h3>Tonal Black Detail</h3>
+                        <p>Close-up of black bead and sequin handwork</p>
+                    </div>
+                </article>
+                <article class="look-card" data-look="10">
+                    <button class="look-image" aria-label="Open Black Sherwani Reception Set" data-full="assets/looks/look-10.jpg" data-title="Black Sherwani Reception Set">
+                        <img src="assets/looks/look-10.jpg" alt="Black Sherwani Reception Set — Tone-on-tone embroidery with jewel buttons" loading="lazy">
+                    </button>
+                    <div class="look-copy">
+                        <span>Design Reference</span>
+                        <h3>Black Sherwani Reception Set</h3>
+                        <p>Tone-on-tone embroidery with jewel buttons</p>
+                    </div>
+                </article>
+                <article class="look-card" data-look="11">
+                    <button class="look-image" aria-label="Open Ivory Black Statement Look" data-full="assets/looks/look-11.jpg" data-title="Ivory Black Statement Look">
+                        <img src="assets/looks/look-11.jpg" alt="Ivory Black Statement Look — White dinner jacket with black floral appliqué" loading="lazy">
+                    </button>
+                    <div class="look-copy">
+                        <span>Design Reference</span>
+                        <h3>Ivory Black Statement Look</h3>
+                        <p>White dinner jacket with black floral appliqué</p>
+                    </div>
+                </article>
+                <article class="look-card" data-look="12">
+                    <button class="look-image" aria-label="Open Ivory Shawl Collar" data-full="assets/looks/look-12.jpg" data-title="Ivory Shawl Collar">
+                        <img src="assets/looks/look-12.jpg" alt="Ivory Shawl Collar — Minimal white jacket with bold black lapel embroidery" loading="lazy">
+                    </button>
+                    <div class="look-copy">
+                        <span>Design Reference</span>
+                        <h3>Ivory Shawl Collar</h3>
+                        <p>Minimal white jacket with bold black lapel embroidery</p>
+                    </div>
+                </article>
+                <article class="look-card" data-look="13">
+                    <button class="look-image" aria-label="Open Monochrome Groom Suit" data-full="assets/looks/look-13.jpg" data-title="Monochrome Groom Suit">
+                        <img src="assets/looks/look-13.jpg" alt="Monochrome Groom Suit — White blazer, black embroidery and formal trousers" loading="lazy">
+                    </button>
+                    <div class="look-copy">
+                        <span>Design Reference</span>
+                        <h3>Monochrome Groom Suit</h3>
+                        <p>White blazer, black embroidery and formal trousers</p>
+                    </div>
+                </article>
+                <article class="look-card" data-look="14">
+                    <button class="look-image" aria-label="Open Ivory Silver Groomwear" data-full="assets/looks/look-14.jpg" data-title="Ivory Silver Groomwear">
+                        <img src="assets/looks/look-14.jpg" alt="Ivory Silver Groomwear — Silver handwork over clean ivory tailoring" loading="lazy">
+                    </button>
+                    <div class="look-copy">
+                        <span>Design Reference</span>
+                        <h3>Ivory Silver Groomwear</h3>
+                        <p>Silver handwork over clean ivory tailoring</p>
+                    </div>
+                </article>
+                <article class="look-card" data-look="15">
+                    <button class="look-image" aria-label="Open Ivory Silver Garden Jacket" data-full="assets/looks/look-15.jpg" data-title="Ivory Silver Garden Jacket">
+                        <img src="assets/looks/look-15.jpg" alt="Ivory Silver Garden Jacket — Floral silver patterning across lapel and hem" loading="lazy">
+                    </button>
+                    <div class="look-copy">
+                        <span>Design Reference</span>
+                        <h3>Ivory Silver Garden Jacket</h3>
+                        <p>Floral silver patterning across lapel and hem</p>
+                    </div>
+                </article>
+                <article class="look-card" data-look="16">
+                    <button class="look-image" aria-label="Open Ivory Black Vine Jacket" data-full="assets/looks/look-16.jpg" data-title="Ivory Black Vine Jacket">
+                        <img src="assets/looks/look-16.jpg" alt="Ivory Black Vine Jacket — Black botanical embroidery over ivory base" loading="lazy">
+                    </button>
+                    <div class="look-copy">
+                        <span>Design Reference</span>
+                        <h3>Ivory Black Vine Jacket</h3>
+                        <p>Black botanical embroidery over ivory base</p>
+                    </div>
+                </article>
+                <article class="look-card" data-look="17">
+                    <button class="look-image" aria-label="Open Black Crystal Tuxedo" data-full="assets/looks/look-17.jpg" data-title="Black Crystal Tuxedo">
+                        <img src="assets/looks/look-17.jpg" alt="Black Crystal Tuxedo — Dark tuxedo with silver crystal botanical pattern" loading="lazy">
+                    </button>
+                    <div class="look-copy">
+                        <span>Design Reference</span>
+                        <h3>Black Crystal Tuxedo</h3>
+                        <p>Dark tuxedo with silver crystal botanical pattern</p>
+                    </div>
+                </article>
+                <article class="look-card" data-look="18">
+                    <button class="look-image" aria-label="Open Emerald Noir Tuxedo" data-full="assets/looks/look-18.jpg" data-title="Emerald Noir Tuxedo">
+                        <img src="assets/looks/look-18.jpg" alt="Emerald Noir Tuxedo — Emerald body, black satin lapel, crystal work" loading="lazy">
+                    </button>
+                    <div class="look-copy">
+                        <span>Design Reference</span>
+                        <h3>Emerald Noir Tuxedo</h3>
+                        <p>Emerald body, black satin lapel, crystal work</p>
+                    </div>
+                </article>
+                <article class="look-card" data-look="19">
+                    <button class="look-image" aria-label="Open Ivory Silver Floral Tuxedo" data-full="assets/looks/look-19.jpg" data-title="Ivory Silver Floral Tuxedo">
+                        <img src="assets/looks/look-19.jpg" alt="Ivory Silver Floral Tuxedo — Asymmetric silver floral embroidery" loading="lazy">
+                    </button>
+                    <div class="look-copy">
+                        <span>Design Reference</span>
+                        <h3>Ivory Silver Floral Tuxedo</h3>
+                        <p>Asymmetric silver floral embroidery</p>
+                    </div>
+                </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="model" class="dark-band" style="padding-top:0">
+            <div class="shell">
+                <div class="section-head">
+                    <div>
+                        <span class="eyebrow"><i class="dot"></i> Business Engine</span>
+                        <h2>Luxury front-end. Asset-light back-end.</h2>
+                    </div>
+                    <p>LAQAB turns artisan capacity into a repeatable commerce engine through catalog-led WhatsApp sales, fixed milestone production and quality-controlled delivery.</p>
+                </div>
+                <div class="model-grid">
+                    <article class="model-card"><span>01</span><h3>D2C Bespoke</h3><p>High-margin custom orders for grooms, families and reception looks. Consultation starts on WhatsApp.</p></article>
+                    <article class="model-card"><span>02</span><h3>B2B Boutique</h3><p>Supply premium embroidery and finished pieces to boutiques, designers and export buyers.</p></article>
+                    <article class="model-card"><span>03</span><h3>Design IP</h3><p>Build a proprietary LAQAB pattern index so the moat compounds beyond labor arbitrage.</p></article>
+                </div>
+                <div class="economics">
+                    <div class="econ"><strong>$500–$5k</strong><span>sherwani / premium groomwear range</span></div>
+                    <div class="econ"><strong>$800–$3k</strong><span>suit and tuxedo opportunity</span></div>
+                    <div class="econ"><strong>8–10</strong><span>target orders/month to break even</span></div>
+                    <div class="econ"><strong>18 mo</strong><span>runway target from seed angel check</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="process">
+            <div class="shell">
+                <div class="section-head">
+                    <div>
+                        <span class="eyebrow"><i class="dot"></i> Operating System</span>
+                        <h2>A simple order flow that can be automated.</h2>
+                    </div>
+                    <p>The goal is not just a clothing label. The goal is an AI-assisted wedding commerce operation where one small team can coordinate design, sales, production and updates.</p>
+                </div>
+                <div class="process">
+                    <article class="step"><b>01</b><h3>Inquiry</h3><p>Lead arrives via WhatsApp, Instagram or boutique referral.</p></article>
+                    <article class="step"><b>02</b><h3>Consult</h3><p>Budget, event, body profile and style direction collected.</p></article>
+                    <article class="step"><b>03</b><h3>Design</h3><p>Reference board becomes embroidery placement and fabric plan.</p></article>
+                    <article class="step"><b>04</b><h3>Assign</h3><p>Karigar cluster matched by skill, workload and delivery date.</p></article>
+                    <article class="step"><b>05</b><h3>Update</h3><p>Milestone photos and progress notes keep buyer confidence high.</p></article>
+                    <article class="step"><b>06</b><h3>Deliver</h3><p>QC, packaging, feedback and referral loop.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section id="investor">
+            <div class="shell">
+                <div class="investor-panel">
+                    <div class="investor-copy">
+                        <span class="eyebrow"><i class="dot"></i> Investor Case</span>
+                        <h2>Seed capital turns LAQAB from craft access into a premium wedding brand.</h2>
+                        <p>Ask: <strong>$75k–$100k for 8–12%</strong>. Use of funds is focused on sample production, content, WhatsApp commerce, paid validation, artisan contracts and first-city operational depth.</p>
+                        <div class="fund-grid">
+                            <div class="fund"><strong>Sample line</strong><span>10–15 hero looks for groomwear catalog, reels and investor showroom.</span></div>
+                            <div class="fund"><strong>Sales infra</strong><span>WhatsApp CRM, quote flow, lead capture and automated follow-ups.</span></div>
+                            <div class="fund"><strong>Production moat</strong><span>Karigar tiering, pricing matrix, QC checklist and pattern library.</span></div>
+                            <div class="fund"><strong>Market validation</strong><span>First 10 paid orders before valuation expansion.</span></div>
+                        </div>
+                        <div class="hero-actions">
+                            <a class="btn btn-primary" href="https://wa.me/919987314177?text=I%20saw%20the%20LAQAB%20investor%20preview.%20Let%27s%20discuss%20the%20angel%20round." target="_blank" rel="noopener">Discuss investment</a>
+                            <a class="btn btn-ghost" href="#looks">Review design board</a>
+                        </div>
+                    </div>
+                    <div class="investor-image"><img src="assets/looks/look-03.jpg" alt="Black gold embroidered LAQAB investor visual"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="roadmap">
+            <div class="shell">
+                <div class="section-head">
+                    <div>
+                        <span class="eyebrow"><i class="dot"></i> Roadmap</span>
+                        <h2>From first orders to diaspora expansion.</h2>
+                    </div>
+                    <p>Keep the launch tight: prove demand, protect supply, then scale content and channel partnerships.</p>
+                </div>
+                <div class="roadmap">
+                    <article class="road"><span>Month 1</span><h3>Showroom</h3><p>Website, catalog, 10 sample designs, WhatsApp order flow.</p></article>
+                    <article class="road"><span>Month 2–3</span><h3>Validation</h3><p>First 5–10 paid orders, customer proof, pricing refinement.</p></article>
+                    <article class="road"><span>Month 4–6</span><h3>Traction</h3><p>Boutique partnerships, wedding planner referrals, repeatable production.</p></article>
+                    <article class="road"><span>Year 1–2</span><h3>Expansion</h3><p>UAE/diaspora demand, design IP library, higher-ticket custom pipeline.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="shell">
+                <div class="contact-card">
+                    <div>
+                        <h2>LAQAB is ready for the first serious conversation.</h2>
+                        <p>For investors, boutique partners and premium groomwear customers: open WhatsApp and start with one line — event, city, timeline and budget.</p>
+                    </div>
+                    <a class="btn btn-primary" href="https://wa.me/919987314177?text=Hi%20Kaif%2C%20I%20want%20to%20talk%20about%20LAQAB." target="_blank" rel="noopener">Start on WhatsApp</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="shell">
+            <span>© LAQAB — Premium Indian Wedding Embroidery</span>
+            <span>Investor preview • Ahmedabad / India / UAE-ready</span>
+        </div>
     </footer>
 
-    <!-- WhatsApp Floating Button -->
-    <div style="position:fixed;bottom:24px;right:24px;z-index:9999;">
-        <a href="https://wa.me/919987314177?text=Namaste!%20Main%20LAQAB%20se%20pochhna%20chahta%20hoon." target="_blank"
-           style="display:flex;align-items:center;justify-content:center;width:60px;height:60px;background:#25D366;border-radius:50%;box-shadow:0 8px 24px rgba(37,211,102,0.3);transition:all 0.3s;text-decoration:none;font-size:28px;"
-           onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-           💬
-        </a>
+    <div class="modal" id="lookModal" role="dialog" aria-modal="true" aria-label="Look preview">
+        <button type="button" id="modalClose" aria-label="Close preview">×</button>
+        <figure>
+            <img id="modalImage" src="" alt="">
+            <figcaption id="modalCaption"></figcaption>
+        </figure>
     </div>
 
     <script>
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(a => {
-            a.addEventListener('click', e => {
-                e.preventDefault();
-                const target = document.querySelector(a.getAttribute('href'));
-                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const modal = document.getElementById('lookModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalCaption = document.getElementById('modalCaption');
+        document.querySelectorAll('.look-image').forEach((btn) => {
+            btn.addEventListener('click', () => {
+                modalImage.src = btn.dataset.full;
+                modalImage.alt = btn.dataset.title;
+                modalCaption.textContent = btn.dataset.title;
+                modal.classList.add('open');
             });
         });
+        function closeModal() {
+            modal.classList.remove('open');
+            modalImage.src = '';
+        }
+        document.getElementById('modalClose').addEventListener('click', closeModal);
+        modal.addEventListener('click', (event) => { if (event.target === modal) closeModal(); });
+        document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeModal(); });
     </script>
 </body>
 </html>
